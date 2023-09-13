@@ -4,18 +4,6 @@
   "dependencyDashboard": true,
   "ignoreDeps": [],
   "labels": ["dependencies"],
-  "packageRules": [
-    {
-      "groupName": "react-component",
-      "matchPackagePatterns": "rc-*",
-      "minor": {
-        "enabled": false
-      },
-      "major": {
-        "enabled": false
-      }
-    }
-  ],
   "postUpdateOptions": ["yarnDedupeHighest"],
   "prConcurrentLimit": 30,
   "prHourlyLimit": 0,
