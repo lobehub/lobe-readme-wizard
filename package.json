@@ -1,0 +1,129 @@
+{
+  "name": "@lobehub/readme-generator",
+  "version": "0.0.0",
+  "description": "",
+  "homepage": "https://github.com/lobehub/lobe-readme-generator",
+  "bugs": {
+    "url": "https://github.com/lobehub/lobe-readme-generator/issues/new/choose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lobehub/lobe-readme-generator.git"
+  },
+  "license": "MIT",
+  "author": "LobeHub <i@lobehub.com>",
+  "sideEffects": false,
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev -p 3020",
+    "i18n": "lobe-i18n",
+    "lint": "npm run lint:ts && npm run lint:style && npm run type-check && npm run lint:circular",
+    "lint:circular": "dpdm src/**/*.ts  --warning false  --tree false  --exit-code circular:1  -T true",
+    "lint:md": "remark . --quiet --frail --output",
+    "lint:style": "stylelint \"{src,tests}/**/*.{js,jsx,ts,tsx}\" --fix",
+    "lint:ts": "eslint \"{src,tests}/**/*.{js,jsx,ts,tsx}\" --fix",
+    "prepare": "husky install",
+    "prettier": "prettier -c --write \"**/**\"",
+    "pull": "git pull",
+    "release": "semantic-release",
+    "start": "next start",
+    "stylelint": "stylelint \"src/**/*.{js,jsx,ts,tsx}\" --fix",
+    "test": "vitest --passWithNoTests",
+    "test:coverage": "vitest run --coverage --passWithNoTests",
+    "test:update": "vitest -u",
+    "type-check": "tsc --noEmit"
+  },
+  "lint-staged": {
+    "*.md": [
+      "remark --quiet --output --",
+      "prettier --write --no-error-on-unmatched-pattern"
+    ],
+    "*.json": [
+      "prettier --write --no-error-on-unmatched-pattern"
+    ],
+    "*.{js,jsx}": [
+      "prettier --write",
+      "stylelint --fix",
+      "eslint --fix"
+    ],
+    "*.{ts,tsx}": [
+      "prettier --parser=typescript --write",
+      "stylelint --fix",
+      "eslint --fix"
+    ]
+  },
+  "dependencies": {
+    "@ant-design/colors": "^7",
+    "@emoji-mart/data": "^1",
+    "@emoji-mart/react": "^1",
+    "@icons-pack/react-simple-icons": "^9",
+    "@lobehub/ui": "latest",
+    "@vercel/analytics": "^1",
+    "ahooks": "^3",
+    "ai": "^2",
+    "antd": "^5",
+    "antd-style": "^3",
+    "emoji-mart": "^5",
+    "fast-deep-equal": "^3",
+    "gpt-tokenizer": "^2",
+    "i18next": "^23",
+    "immer": "^10",
+    "lodash-es": "^4",
+    "lucide-react": "latest",
+    "next": "13.4.7",
+    "next-i18next": "^14",
+    "openai": "^4.6.0",
+    "polished": "^4",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-i18next": "^13",
+    "react-intersection-observer": "^9",
+    "react-layout-kit": "^1.7.1",
+    "url-join": "^5",
+    "use-merge-value": "^1",
+    "utility-types": "^3",
+    "zustand": "^4.4",
+    "zustand-utils": "^1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17",
+    "@lobehub/i18n-cli": "latest",
+    "@lobehub/lint": "latest",
+    "@next/eslint-plugin-next": "^13",
+    "@testing-library/jest-dom": "^6",
+    "@testing-library/react": "^14",
+    "@types/chroma-js": "^2",
+    "@types/lodash-es": "^4",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/systemjs": "^6.13.2",
+    "@types/testing-library__jest-dom": "^6",
+    "@types/uuid": "^9",
+    "@umijs/lint": "^4",
+    "@vitest/coverage-v8": "latest",
+    "commitlint": "^17",
+    "consola": "^3",
+    "dpdm": "^3",
+    "eslint": "^8",
+    "husky": "^8",
+    "i18next-browser-languagedetector": "^7",
+    "i18next-resources-for-ts": "^1",
+    "jsdom": "^22",
+    "lint-staged": "^14",
+    "next-pwa": "^5",
+    "node-fetch": "^3",
+    "prettier": "^3",
+    "remark": "^14",
+    "remark-cli": "^11",
+    "semantic-release": "^21",
+    "stylelint": "^15",
+    "ts-node": "^10",
+    "typescript": "^5",
+    "vitest": "latest"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  }
+}
