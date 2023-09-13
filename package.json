@@ -70,7 +70,7 @@
     "immer": "^10",
     "lodash-es": "^4",
     "lucide-react": "latest",
-    "next": "13.4.7",
+    "next": "13.4.19",
     "next-i18next": "^14",
     "openai": "^4.6.0",
     "polished": "^4",
