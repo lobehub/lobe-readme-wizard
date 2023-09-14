@@ -1,13 +1,26 @@
 import { GetServerSideProps } from 'next';
-import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import Head from 'next/head';
 
 import { i18n } from '@/../next-i18next.config';
+import MarkdownEditor from '@/Features/MarkdownEditor';
+import { genSiteHeadTitle } from '@/utils/genSiteHeadTitle';
+
+import Layout from './layout';
 
 const Homepage = () => {
-  const { t } = useTranslation('common');
+  const pageTitle = genSiteHeadTitle();
 
-  return <h1>{t('h1')}</h1>;
+  return (
+    <>
+      <Head>
+        <title>{pageTitle}</title>
+      </Head>
+      <Layout>
+        <MarkdownEditor />
+      </Layout>
+    </>
+  );
 };
 
 export const getServerSideProps: GetServerSideProps = async ({ locale }) => ({
