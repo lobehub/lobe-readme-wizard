@@ -105,6 +105,22 @@ export const useStyles = createStyles(({ css, isDarkMode, cx }) => {
         position: relative;
         height: 100%;
         padding: 24px;
+
+        [align='center'] {
+          text-align: center !important;
+
+          p {
+            text-align: center !important;
+          }
+        }
+
+        [align='right'] {
+          text-align: right !important;
+
+          p {
+            text-align: right !important;
+          }
+        }
       `,
     ),
     scheme,
