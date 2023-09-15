@@ -10,8 +10,8 @@ export const useStyles = createStyles(({ css, token, responsive }) => {
       width: 100%;
 
       background: ${token.colorBgContainer};
-      border: 1px solid ${token.colorBorder};
       border-radius: ${token.borderRadiusLG}px;
+      box-shadow: 0 0 0 1px ${token.colorBorder};
     `,
     editor: css`
       flex: 1;

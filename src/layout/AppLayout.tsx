@@ -18,7 +18,7 @@ const AppLayout = memo<{ children: ReactNode }>(({ children }) => {
         <Center horizontal>
           <Flexbox
             flex={1}
-            style={{ maxWidth: 'min(100vw, 1920px)', padding: 16, position: 'relative' }}
+            style={{ maxWidth: 'min(100vw, 960px)', padding: '32px 16px', position: 'relative' }}
           >
             {children}
           </Flexbox>
