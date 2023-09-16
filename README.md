@@ -8,7 +8,7 @@
 
 <h1 align="center">Readme Generator</h1>
 
-WIP
+\[WIP] Generate an aesthetically pleasing product README through intelligent methods
 
 [Changelog](./CHANGELOG.md) · [Report Bug][github-issues-link] · [Request Feature][github-issues-link]
 
@@ -34,6 +34,7 @@ WIP
 
 - [⌨️ Local Development](#️-local-development)
 - [🤝 Contributing](#-contributing)
+- [🔗 More Products](#-more-products)
 
 ####
 
@@ -76,11 +77,25 @@ Contributions of all types are more than welcome, if you are interested in contr
 
 </div>
 
+## 🔗 More Products
+
+- **[🤖 Lobe Chat][lobe-chat] :** An open-source, extensible (Function Calling), high-performance chatbot framework. It supports one-click free deployment of your private ChatGPT/LLM web application.
+- **[🤯 Lobe Theme][lobe-theme] :** The modern theme for stable diffusion webui, exquisite interface design, highly customizable UI, and efficiency boosting features.
+- **[🍭 Lobe UI][lobe-ui] :** An open-source UI component library for building AIGC web apps
+- **[🌏 Lobe i18n][lobe-i18n] :** Lobe i18n is an automation tool for the i18n (internationalization) translation process, powered by ChatGPT. It supports features such as automatic splitting of large files, incremental updates, and customization options for the OpenAI model, API proxy, and temperature.
+- **[💌 Lobe Commit][lobe-commit] :** Lobe Commit is a CLI tool that leverages Langchain/ChatGPT to generate Gitmoji-based commit messages.
+
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
+
 ---
 
 #### 📝 License
 
-Copyright © 2023 \[LobeHub]\[profile-link]. <br />
+Copyright © 2023 [LobeHub][profile-link]. <br />
 This project is [MIT](./LICENSE) licensed.
 
 <!-- LINK GROUP -->
@@ -112,5 +127,11 @@ This project is [MIT](./LICENSE) licensed.
 [github-releasedate-shield]: https://img.shields.io/github/release-date/lobehub/lobe-readme-generator?labelColor=black&style=flat-square
 [github-stars-link]: https://github.com/lobehub/lobe-readme-generator/network/stargazers
 [github-stars-shield]: https://img.shields.io/github/stars/lobehub/lobe-readme-generator?color=ffcb47&labelColor=black&style=flat-square
+[lobe-chat]: https://github.com/lobehub/lobe-chat
+[lobe-commit]: https://github.com/lobehub/lobe-commit/tree/master/packages/lobe-commit
+[lobe-i18n]: https://github.com/lobehub/lobe-commit/tree/master/packages/lobe-i18n
+[lobe-theme]: https://github.com/lobehub/sd-webui-lobe-theme
+[lobe-ui]: https://github.com/lobehub/lobe-ui
 [pr-welcome-link]: https://github.com/lobehub/lobe-chat/pulls
 [pr-welcome-shield]: https://img.shields.io/badge/🤯_pr_welcome-%E2%86%92-ffcb47?labelColor=black&style=for-the-badge
+[profile-link]: https://github.com/lobehub

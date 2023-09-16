@@ -15,6 +15,7 @@
   "sideEffects": false,
   "scripts": {
     "build": "next build",
+    "ci": "npm run lint && npm run type-check",
     "dev": "next dev -p 3020",
     "i18n": "lobe-i18n",
     "icon-sync": "node ./scripts/syncSimpleIconList.mjs",
