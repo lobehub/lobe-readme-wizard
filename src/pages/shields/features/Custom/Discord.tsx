@@ -1,31 +1,36 @@
 import { useControls, useCreateStore } from '@lobehub/ui';
+import { LevaInputs } from 'leva';
 import { memo, useMemo } from 'react';
 
 import MarkdownStorybook from '@/Features/MarkdownStorybook';
 import { shieldBaseControls } from '@/const/shieldBaseControls';
 import { defaultControls } from '@/pages/shields/features/Custom/share';
-import { genCustomSingleShield } from '@/services/genCustomShield';
+import { genCustomDiscordShield } from '@/services/genCustomShield';
 
 const controls = {
   /* eslint-disable sort-keys-fix/sort-keys-fix */
-  label: 'Readme Generator',
-  color: {
-    ...shieldBaseControls.color,
+  serverId: {
+    value: '1127171173982154893',
+    type: LevaInputs.STRING,
+  },
+  label: 'discord',
+  labelColor: {
+    ...shieldBaseControls.labelColor,
     value: 'black',
   },
-  link: 'https://github.com/lobehub/lobe-readme-generator',
+  link: 'https://discord.gg/AYFPHvv2jT',
   ...defaultControls,
   /* eslint-enable */
 };
 
-const CustomSingle = memo(() => {
+const CustomDiscord = memo(() => {
   const store = useCreateStore();
 
   const options = useControls(controls, { store });
 
-  const md = useMemo(() => genCustomSingleShield(options), [options]);
+  const md = useMemo(() => genCustomDiscordShield(options), [options]);
 
   return <MarkdownStorybook levaStore={store}>{md.join('\n\n')}</MarkdownStorybook>;
 });
 
-export default CustomSingle;
+export default CustomDiscord;

@@ -1,44 +1,34 @@
 import { useControls, useCreateStore } from '@lobehub/ui';
-import { cloneDeep, identity, merge, pickBy } from 'lodash-es';
-import qs from 'query-string';
 import { memo, useMemo } from 'react';
-import urlJoin from 'url-join';
 
 import MarkdownStorybook from '@/Features/MarkdownStorybook';
-import { shieldBaseConfig } from '@/const/shieldBaseConfig';
-import { SHIELD_BADGE_URL } from '@/const/url';
-import { formatCustomLabel, genImg } from '@/utils/genMD';
+import { shieldBaseControls } from '@/const/shieldBaseControls';
+import { genCustomDoubleShield } from '@/services/genCustomShield';
 
-const defaultConfig = merge(cloneDeep(shieldBaseConfig), {
+import { defaultControls } from './share';
+
+const controls = {
+  /* eslint-disable sort-keys-fix/sort-keys-fix */
+  content: 'LobeHub',
+  labelColor: shieldBaseControls.labelColor,
+  label: 'Readme Generator',
   color: {
+    ...shieldBaseControls.color,
     value: 'white',
   },
-  content: 'LobeHub',
-  label: 'Readme Generator',
-});
+  link: 'https://github.com/lobehub/lobe-readme-generator',
+  ...defaultControls,
+  /* eslint-enable */
+};
 
-const Github = memo(() => {
+const CustomDouble = memo(() => {
   const store = useCreateStore();
 
-  const { content, label, color, ...config } = useControls(defaultConfig, { store });
+  const options = useControls(controls, { store });
 
-  const md = useMemo(() => {
-    const url = qs.stringifyUrl({
-      query: pickBy(config, identity) as any,
-      url: urlJoin(
-        SHIELD_BADGE_URL,
-        formatCustomLabel({
-          color: color as string,
-          content,
-          label,
-        }),
-      ),
-    });
+  const md = useMemo(() => genCustomDoubleShield(options), [options]);
 
-    return genImg(content || label, url).join('\n\n');
-  }, [content, label, color, config]);
-
-  return <MarkdownStorybook levaStore={store}>{md}</MarkdownStorybook>;
+  return <MarkdownStorybook levaStore={store}>{md.join('\n\n')}</MarkdownStorybook>;
 });
 
-export default Github;
+export default CustomDouble;

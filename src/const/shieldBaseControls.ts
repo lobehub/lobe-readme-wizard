@@ -1,14 +1,5 @@
 import icons from './icons';
 
-export interface ShieldBaseConfig {
-  color?: string;
-  label?: string;
-  labelColor?: string;
-  logo?: string;
-  logoColor?: string;
-  style?: 'flat' | 'flat-square' | 'plastic' | 'for-the-badge' | 'social';
-}
-
 export const colorOptions = {
   black: 'black',
   blue: '8ae8ff',
@@ -17,21 +8,22 @@ export const colorOptions = {
   gold: 'ffcb47',
   green: '55b467',
   lime: 'c4f042',
-  magenta: 'e34ba9',
+  magenta: 'ff80eb',
   orange: 'ff802b',
-  purple: 'bd54c6',
+  purple: 'B0A3FF',
   red: 'f04f88',
   volcano: 'ec5e41',
   white: 'white',
   yellow: 'ffef5c',
 } as const;
 
-export const shieldBaseConfig = {
+export const shieldBaseControls = {
+  /* eslint-disable sort-keys-fix/sort-keys-fix */
+  label: '',
   color: {
     options: colorOptions,
     value: '',
   },
-  label: '',
   labelColor: {
     options: colorOptions,
     value: 'black',
@@ -48,4 +40,5 @@ export const shieldBaseConfig = {
     options: ['flat', 'flat-square', 'plastic', 'for-the-badge', 'social'],
     value: 'flat-square',
   },
+  /* eslint-enable */
 } as const;

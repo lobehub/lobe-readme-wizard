@@ -4,28 +4,30 @@ import { memo, useMemo } from 'react';
 import MarkdownStorybook from '@/Features/MarkdownStorybook';
 import { shieldBaseControls } from '@/const/shieldBaseControls';
 import { defaultControls } from '@/pages/shields/features/Custom/share';
-import { genCustomSingleShield } from '@/services/genCustomShield';
+import { genCustomWebsiteShield } from '@/services/genCustomShield';
 
 const controls = {
   /* eslint-disable sort-keys-fix/sort-keys-fix */
-  label: 'Readme Generator',
-  color: {
-    ...shieldBaseControls.color,
+  label: 'LobeChat',
+  url: 'https://chat-preview.lobehub.com',
+  up_message: 'online',
+  down_message: 'offline',
+  labelColor: {
+    ...shieldBaseControls.labelColor,
     value: 'black',
   },
-  link: 'https://github.com/lobehub/lobe-readme-generator',
   ...defaultControls,
   /* eslint-enable */
 };
 
-const CustomSingle = memo(() => {
+const CustomWebsite = memo(() => {
   const store = useCreateStore();
 
   const options = useControls(controls, { store });
 
-  const md = useMemo(() => genCustomSingleShield(options), [options]);
+  const md = useMemo(() => genCustomWebsiteShield(options), [options]);
 
   return <MarkdownStorybook levaStore={store}>{md.join('\n\n')}</MarkdownStorybook>;
 });
 
-export default CustomSingle;
+export default CustomWebsite;
