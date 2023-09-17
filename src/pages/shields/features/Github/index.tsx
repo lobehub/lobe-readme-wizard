@@ -3,6 +3,7 @@ import { memo } from 'react';
 import Title from '@/components/Title';
 
 import Action from './Action';
+import Codespace from './Codespace';
 import Contributors from './Contributors';
 import Release from './Release';
 import Social from './Social';
@@ -19,6 +20,8 @@ export default memo(() => {
       <Action />
       <Title link={'https://star-history.com'}>Github Star History</Title>
       <StarHistory />
+      <Title>Github Codespace</Title>
+      <Codespace />
       <Title link={'https://contrib.rocks'}>Github Contrib</Title>
       <Contributors />
     </>

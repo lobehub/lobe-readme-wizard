@@ -2,7 +2,11 @@ import { identity, pickBy } from 'lodash-es';
 import qs from 'query-string';
 import urlJoin from 'url-join';
 
-import { GithubShieldControlItem } from '@/const/githubShieldControls';
+import {
+  GithubShieldControlItem,
+  githubReleaseControls,
+  githubSoialControls,
+} from '@/const/githubShieldControls';
 import {
   GITHUBE_CONTRIB_URL,
   GITHUB_STAR_HISTORY_URL,
@@ -13,7 +17,7 @@ import { GithubShieldBaseOptions } from '@/types/shields';
 import { genShield } from '@/utils/genShield';
 import { genThemeModeImg } from '@/utils/genThemeModeImg';
 
-interface GithubShieldOptions extends GithubShieldBaseOptions, GithubShieldControlItem {
+export interface GithubShieldOptions extends GithubShieldBaseOptions, GithubShieldControlItem {
   name: string;
 }
 
@@ -28,6 +32,38 @@ export const genGithubShield = (options: GithubShieldOptions) => {
   const defLink = genLink?.({ branch, owner, repo });
 
   return genShield(`github-${name}`, defShield, defLink);
+};
+
+export const genGithubSocialShields = (
+  options: Partial<GithubShieldOptions> | any,
+  pickOptions: { [key: string]: boolean },
+) => {
+  const defShields: string[] = [];
+  const defLinks: string[] = [];
+
+  for (const [name, config] of Object.entries(githubSoialControls)) {
+    if (!pickOptions[name]) continue;
+    const data = genGithubShield({ name, ...options, ...config });
+    defShields.push(data[0]);
+    defLinks.push(data[1]);
+  }
+  return [defShields.join('\n'), defLinks.join('\n')];
+};
+
+export const genGithubReleaseShields = (
+  options: Partial<GithubShieldOptions> | any,
+  pickOptions: { [key: string]: boolean },
+) => {
+  const defShields: string[] = [];
+  const defLinks: string[] = [];
+
+  for (const [name, config] of Object.entries(githubReleaseControls)) {
+    if (!pickOptions[name]) continue;
+    const data = genGithubShield({ name, ...options, ...config });
+    defShields.push(data[0]);
+    defLinks.push(data[1]);
+  }
+  return [defShields.join('\n'), defLinks.join('\n')];
 };
 
 interface GithubActionShieldOptions extends GithubShieldBaseOptions {
@@ -46,6 +82,21 @@ export const genGithubActionShield = (options: GithubActionShieldOptions) => {
   const defLink = urlJoin(GITHUB_URL, 'actions/workflows', owner, repo, workflow + '.yml');
 
   return genShield(`github-action-${workflow}`, defShield, defLink);
+};
+
+export const genGithubActionsShield = (options: GithubActionShieldOptions) => {
+  const { workflow, ...config } = options;
+  const workflows = workflow.replaceAll(' ', '').replaceAll('，', ',').split(',');
+  const defShields: string[] = [];
+  const defLinks: string[] = [];
+
+  for (const w of workflows) {
+    const data = genGithubActionShield({ workflow: w, ...config });
+    defShields.push(data[0]);
+    defLinks.push(data[1]);
+  }
+
+  return [defShields.join('\n'), defLinks.join('\n')];
 };
 
 export const genGithubStarHistoryShield = (options: { owner: string; repo: string }) => {
@@ -75,4 +126,10 @@ export const GenGithubContributorsShield = (options: { owner: string; repo: stri
   });
   const defLink = urlJoin(GITHUB_URL, options.owner, options.repo, 'graphs/contributors');
   return genShield('github-contrib', defShield, defLink);
+};
+
+export const GenGithubCodespaceShield = (options: { owner: string; repo: string }) => {
+  const defShield = 'https://github.com/codespaces/badge.svg';
+  const defLink = urlJoin('https://codespaces.new', options.owner, options.repo);
+  return genShield('github-codespace', defShield, defLink);
 };

@@ -2,7 +2,7 @@ import { identity, pickBy } from 'lodash-es';
 import qs from 'query-string';
 import urlJoin from 'url-join';
 
-import { NpmShieldControlItem } from '@/const/npmShieldControls';
+import { NpmShieldControlItem, npmReleaseControls } from '@/const/npmShieldControls';
 import { NpmShieldBaseOptions } from '@/types/shields';
 import { genShield } from '@/utils/genShield';
 
@@ -21,4 +21,20 @@ export const genNpmShield = (options: NpmShieldOptions) => {
   const defLink = genLink?.(packageName);
 
   return genShield(`npm-${name}`, defShield, defLink);
+};
+
+export const genNpmReleaseShields = (
+  options: Partial<NpmShieldOptions> | any,
+  pickOptions: { [key: string]: boolean },
+) => {
+  const defShields: string[] = [];
+  const defLinks: string[] = [];
+
+  for (const [name, config] of Object.entries(npmReleaseControls)) {
+    if (!pickOptions[name]) continue;
+    const data = genNpmShield({ name, ...options, ...config });
+    defShields.push(data[0]);
+    defLinks.push(data[1]);
+  }
+  return [defShields.join('\n'), defLinks.join('\n')];
 };

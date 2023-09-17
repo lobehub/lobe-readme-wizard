@@ -14,7 +14,7 @@ const Homepage = () => {
   const pageTitle = genSiteHeadTitle();
   const setActiveTab = useStore((s) => s.setActiveTab);
 
-  setActiveTab(Tab.Shields);
+  setActiveTab(Tab.Readme);
 
   return (
     <>

@@ -2,22 +2,22 @@ import { useControls, useCreateStore } from '@lobehub/ui';
 import { memo, useMemo } from 'react';
 
 import MarkdownStorybook from '@/features/MarkdownStorybook';
-import { GenGithubContributorsShield } from '@/services/genGithubShield';
+import { GenGithubCodespaceShield } from '@/services/genGithubShield';
 
 import { defaultControls } from './share';
 
 const controls = defaultControls;
 
-const GithubContributors = memo(() => {
+const GithubCodespace = memo(() => {
   const store = useCreateStore();
 
   const options = useControls(controls, { store });
 
   const md = useMemo(() => {
-    return GenGithubContributorsShield(options);
+    return GenGithubCodespaceShield(options);
   }, [options]);
 
   return <MarkdownStorybook levaStore={store}>{md.join('\n\n')}</MarkdownStorybook>;
 });
 
-export default GithubContributors;
+export default GithubCodespace;

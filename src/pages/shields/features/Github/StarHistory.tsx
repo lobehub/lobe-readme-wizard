@@ -1,7 +1,7 @@
 import { useControls, useCreateStore } from '@lobehub/ui';
 import { memo, useMemo } from 'react';
 
-import MarkdownStorybook from '@/Features/MarkdownStorybook';
+import MarkdownStorybook from '@/features/MarkdownStorybook';
 import { genGithubStarHistoryShield } from '@/services/genGithubShield';
 
 import { defaultControls } from './share';

@@ -1,107 +1,49 @@
-export const sample = `# A demo of \`react-markdown\`
+import urlJoin from 'url-join';
 
-\`react-markdown\` is a markdown component for React.
+import { GITHUB_URL, SHIELD_BADGE_URL } from '@/const/url';
+import { genShield } from '@/utils/genShield';
 
-👉 Changes are re-rendered as you type.
+export const featuresSample = `
+## ✨ Features
 
-👈 Try writing some markdown on the left.
+- [x] 💨 **Quick Deployment**: Using the Vercel platform, you can deploy with just one click and complete the process within 1 minute, without any complex configuration;
+- [x] 💎 **Exquisite UI Design**: With a carefully designed interface, it offers an elegant appearance and smooth interaction. It supports light and dark themes and is mobile-friendly. PWA support provides a more native-like experience;
+- [x] 🗣️ **Smooth Conversation Experience**: Fluid responses ensure a smooth conversation experience. It fully supports Markdown rendering, including code highlighting, LaTex formulas, Mermaid flowcharts, and more;
+- [x] 🧩 **Plugin Support & Custom Plugin Development**: Conversations are extendable with plugins. Users can install and use various plugins, such as search engines, web extraction, etc. It also supports the development of custom plugins to meet custom needs;
+- [x] 🔒 **Privacy Protection**: All data is stored locally in the user's browser, ensuring user privacy;
+- [x] 🤖 **Customizable Assistant Roles**: Users can create, share, and debug personalized dialogue assistant roles according to their needs, providing more flexible and personalized dialogue functions;
+- [x] 🌐 **Custom Domain**: If users have their own domain, they can bind it to the platform for quick access to the dialogue assistant from anywhere.
+- [x] 🏬 **Role Market**: A Role Market is provided where users can select their preferred dialogue assistant roles, enriching the content and style of the dialogue;
+`;
 
-## Overview
+export const creditsSample = `
+## 🔗 Links
 
-* Follows [CommonMark](https://commonmark.org)
-* Optionally follows [GitHub Flavored Markdown](https://github.github.com/gfm/)
-* Renders actual React elements instead of using \`dangerouslySetInnerHTML\`
-* Lets you define your own components (to render \`MyHeading\` instead of \`h1\`)
-* Has a lot of plugins
+### More Products
 
-## Table of contents
+- **[🤖 Lobe Chat][lobe-chat] :** An open-source, extensible (Function Calling), high-performance chatbot framework. It supports one-click free deployment of your private ChatGPT/LLM web application.
+- **[🌏 Lobe i18n][lobe-i18n] :** Lobe i18n is an automation tool for the i18n (internationalization) translation process, powered by ChatGPT. It supports features such as automatic splitting of large files, incremental updates, and customization options for the OpenAI model, API proxy, and temperature.
+- **[💌 Lobe Commit][lobe-commit] :** Lobe Commit is a CLI tool that leverages Langchain/ChatGPT to generate Gitmoji-based commit messages.
 
-Here is an example of a plugin in action
-([\`remark-toc\`](https://github.com/remarkjs/remark-toc)).
-This section is replaced by an actual table of contents.
+### Credits
 
-## Syntax highlighting
+- stable-diffusion-webui：<https://github.com/AUTOMATIC1111/stable-diffusion-webui>
+- gradio-theme-gallery: <https://huggingface.co/spaces/gradio/theme-gallery>
+- cozy-nest: <https://github.com/Nevysha/Cozy-Nest>
+`;
 
-Here is an example of a plugin to highlight code:
-[\`rehype-highlight\`](https://github.com/rehypejs/rehype-highlight).
+export const bunShields = genShield(
+  'bun',
+  urlJoin(SHIELD_BADGE_URL, '-speedup%20with%20bun-black?logo=bun&style=for-the-badge'),
+  'https://bun.sh',
+);
 
-\`\`\`js
-import React from 'react'
-import ReactDOM from 'react-dom'
-import ReactMarkdown from 'react-markdown'
-import rehypeHighlight from 'rehype-highlight'
-
-ReactDOM.render(
-  <ReactMarkdown rehypePlugins={[rehypeHighlight]}>{'# Your markdown here'}</ReactMarkdown>,
-  document.querySelector('#content')
-)
-\`\`\`
-
-Pretty neat, eh?
-
-## GitHub flavored markdown (GFM)
-
-For GFM, you can *also* use a plugin:
-[\`remark-gfm\`](https://github.com/remarkjs/react-markdown#use).
-It adds support for GitHub-specific extensions to the language:
-tables, strikethrough, tasklists, and literal URLs.
-
-These features **do not work by default**.
-👆 Use the toggle above to add the plugin.
-
-| Feature    | Support              |
-| ---------: | :------------------- |
-| CommonMark | 100%                 |
-| GFM        | 100% w/ \`remark-gfm\` |
-
-~~strikethrough~~
-
-* [ ] task list
-* [x] checked item
-
-https://example.com
-
-## HTML in markdown
-
-⚠️ HTML in markdown is quite unsafe, but if you want to support it, you can
-use [\`rehype-raw\`](https://github.com/rehypejs/rehype-raw).
-You should probably combine it with
-[\`rehype-sanitize\`](https://github.com/rehypejs/rehype-sanitize).
-
-<blockquote>
-  👆 Use the toggle above to add the plugin.
-</blockquote>
-
-## Components
-
-You can pass components to change things:
-
-\`\`\`js
-import React from 'react'
-import ReactDOM from 'react-dom'
-import ReactMarkdown from 'react-markdown'
-import MyFancyRule from './components/my-fancy-rule.js'
-
-ReactDOM.render(
-  <ReactMarkdown
-    components={{
-      // Use h2s instead of h1s
-      h1: 'h2',
-      // Use a component instead of hrs
-      hr: ({node, ...props}) => <MyFancyRule {...props} />
-    }}
-  >
-    # Your markdown here
-  </ReactMarkdown>,
-  document.querySelector('#content')
-)
-\`\`\`
-
-## More info?
-
-Much more info is available in the
-[readme on GitHub](https://github.com/remarkjs/react-markdown)!
-
-***
-
-A component by [Espen Hovlandsdal](https://espen.codes/)`;
+export const prWelcomeShields = (prWelcome: string, owner: string, repo: string) =>
+  genShield(
+    'pr-welcome',
+    urlJoin(
+      SHIELD_BADGE_URL,
+      `${encodeURIComponent(prWelcome)}-%E2%86%92-ffcb47?labelColor=black&style=for-the-badge`,
+    ),
+    urlJoin(GITHUB_URL, owner, repo, 'pulls'),
+  );

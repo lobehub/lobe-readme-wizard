@@ -1,1 +1,1 @@
-export { default, getServerSideProps } from './shields/index.page';
+export { default, getServerSideProps } from './readme/index.page';

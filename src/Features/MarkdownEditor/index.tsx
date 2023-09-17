@@ -5,7 +5,6 @@ import { memo, useState } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
 import Markdown from '@/components/Markdown';
-import { sample } from '@/const/sample';
 
 import { useStyles } from './style';
 
@@ -14,9 +13,9 @@ enum Tabs {
   preview = 'preview',
 }
 
-const MarkdownEditor = memo(() => {
+const MarkdownEditor = memo<{ children: string }>(({ children }) => {
   const [tab, setTab] = useState<Tabs>(Tabs.editor);
-  const [code, setCode] = useState<string>(sample);
+  const [code, setCode] = useState<string>(children);
   const { styles } = useStyles();
   const { mobile } = useResponsive();
 
@@ -52,16 +51,16 @@ const MarkdownEditor = memo(() => {
           value={tab}
         />
         <div className={styles.container}>
-          {tab === Tabs.editor && editor}
           {tab === Tabs.preview && preview}
+          {tab === Tabs.editor && editor}
         </div>
       </Flexbox>
     );
 
   return (
     <Flexbox align={'stretch'} className={styles.container} horizontal>
-      {editor}
       {preview}
+      {editor}
     </Flexbox>
   );
 });

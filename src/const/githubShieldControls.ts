@@ -3,6 +3,7 @@ import urlJoin from 'url-join';
 import { colorOptions } from '@/const/shieldBaseControls';
 import { GITHUB_URL, SHIELD_GITHUB_URL } from '@/const/url';
 import { GithubShieldBaseOptions, ShieldsBaseOptions } from '@/types/shields';
+import { genPickList } from '@/utils/genPickList';
 
 export interface GithubShieldControlItem extends Partial<ShieldsBaseOptions> {
   genLink?: (options: GithubShieldBaseOptions) => string | undefined;
@@ -43,6 +44,8 @@ export const githubSoialControls: {
   /* eslint-enable */
 };
 
+export const githubSoialControlsPickList = genPickList(githubSoialControls);
+
 export const githubReleaseControls: {
   [key: string]: GithubShieldControlItem;
 } = {
@@ -64,3 +67,5 @@ export const githubReleaseControls: {
   },
   /* eslint-enable */
 };
+
+export const githubReleaseControlsPickList = genPickList(githubReleaseControls);

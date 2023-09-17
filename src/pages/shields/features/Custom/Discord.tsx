@@ -2,8 +2,8 @@ import { useControls, useCreateStore } from '@lobehub/ui';
 import { LevaInputs } from 'leva';
 import { memo, useMemo } from 'react';
 
-import MarkdownStorybook from '@/Features/MarkdownStorybook';
 import { shieldBaseControls } from '@/const/shieldBaseControls';
+import MarkdownStorybook from '@/features/MarkdownStorybook';
 import { defaultControls } from '@/pages/shields/features/Custom/share';
 import { genCustomDiscordShield } from '@/services/genCustomShield';
 

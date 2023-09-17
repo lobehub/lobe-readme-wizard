@@ -19,7 +19,7 @@ export const useStyles = createStyles(({ css, token, responsive }) => {
     `,
     markdown: css`
       flex: 1;
-      border-left: 1px solid ${token.colorBorder};
+      border-right: 1px solid ${token.colorBorder};
 
       ${responsive.mobile} {
         border-left: none;

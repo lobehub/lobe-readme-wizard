@@ -54,6 +54,7 @@
     ]
   },
   "dependencies": {
+    "@icons-pack/react-simple-icons": "latest",
     "@lobehub/ui": "latest",
     "@vercel/analytics": "^1",
     "ahooks": "^3",
@@ -82,6 +83,7 @@
     "remark-gfm": "^3",
     "remark-slug": "^7",
     "remark-toc": "^8",
+    "satori": "^0.10",
     "simple-icons": "^9",
     "swr": "^2",
     "url-join": "^5",
@@ -111,6 +113,9 @@
     "lint-staged": "^14",
     "next-pwa": "^5",
     "prettier": "^3",
+    "rehype-format": "latest",
+    "rehype-parse": "latest",
+    "rehype-stringify": "latest",
     "remark": "^14",
     "remark-cli": "^11",
     "semantic-release": "^21",
