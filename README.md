@@ -101,7 +101,7 @@ This project is [MIT](./LICENSE) licensed.
 
 <!-- LINK GROUP -->
 
-[back-to-top]: https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square
+[back-to-top]: https://img.shields.io/badge/-BACK_TO_TOP-black?style=flat-square
 [bun-link]: https://bun.sh
 [bun-shield]: https://img.shields.io/badge/-speedup%20with%20bun-black?logo=bun&style=for-the-badge
 [codespaces-link]: https://codespaces.new/lobehub/lobe-readme-generator
