@@ -13,6 +13,7 @@
 [Changelog](./CHANGELOG.md) · [Report Bug][github-issues-link] · [Request Feature][github-issues-link]
 
 [![][github-release-shield]][github-release-link]
+[![][vecel-shield]][vecel-link]
 [![][discord-shield]][discord-link]
 [![][github-releasedate-shield]][github-releasedate-link]
 [![][github-action-test-shield]][github-action-test-link]
@@ -122,7 +123,7 @@ This project is [MIT](./LICENSE) licensed.
 [github-license-link]: https://github.com/lobehub/lobe-readme-generator/blob/main/LICENSE
 [github-license-shield]: https://img.shields.io/github/license/lobehub/lobe-readme-generator?color=white&labelColor=black&style=flat-square
 [github-release-link]: https://github.com/lobehub/lobe-readme-generator/releases
-[github-release-shield]: https://img.shields.io/github/v/release/lobehub/lobe-readme-generator?color=369eff&labelColor=black&logo=github&style=flat-square
+[github-release-shield]: https://img.shields.io/github/v/release/lobehub/lobe-readme-generator?logo=github&color=369eff&labelColor=black&style=flat-square
 [github-releasedate-link]: https://github.com/lobehub/lobe-readme-generator/releases
 [github-releasedate-shield]: https://img.shields.io/github/release-date/lobehub/lobe-readme-generator?labelColor=black&style=flat-square
 [github-stars-link]: https://github.com/lobehub/lobe-readme-generator/network/stargazers
@@ -135,3 +136,5 @@ This project is [MIT](./LICENSE) licensed.
 [pr-welcome-link]: https://github.com/lobehub/lobe-chat/pulls
 [pr-welcome-shield]: https://img.shields.io/badge/🤯_pr_welcome-%E2%86%92-ffcb47?labelColor=black&style=for-the-badge
 [profile-link]: https://github.com/lobehub
+[vecel-link]: https://lobe-readme-generator.vercel.app
+[vecel-shield]: https://img.shields.io/website?down_message=offline&label=vecel&labelColor=black&logo=vercel&style=flat-square&up_message=online&url=https%3A%2F%2Flobe-readme-generator.vercel.app
