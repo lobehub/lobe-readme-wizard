@@ -2,6 +2,37 @@
 
 # Changelog
 
+### [Version&nbsp;0.2.1](https://github.com/lobehub/lobe-readme-generator/compare/v0.2.0...v0.2.1)
+<sup>Released on **2023-09-18**</sup>
+
+
+#### 🐛 Bug Fixes
+
+- **misc**: Simple icon.
+
+
+<br/>
+
+
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+
+
+#### What's fixed
+
+* **misc**: Simple icon ([0bb612c](https://github.com/lobehub/lobe-readme-generator/commit/0bb612c))
+
+</details>
+
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ## [Version&nbsp;0.2.0](https://github.com/lobehub/lobe-readme-generator/compare/v0.1.0...v0.2.0)
 <sup>Released on **2023-09-17**</sup>
 

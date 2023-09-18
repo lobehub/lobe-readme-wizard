@@ -1,6 +1,6 @@
 {
   "name": "@lobehub/readme-generator",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Generate an aesthetically pleasing product README through intelligent methods",
   "homepage": "https://github.com/lobehub/lobe-readme-generator",
   "bugs": {
