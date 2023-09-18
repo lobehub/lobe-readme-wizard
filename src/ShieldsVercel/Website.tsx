@@ -6,7 +6,7 @@ import { genVercelWebsiteShield } from '@/services/genVercelShield';
 
 const controls = {
   label: '',
-  url: 'https://lobe-readme-generator.vercel.app',
+  url: 'https://lobe-readme-wizard.vercel.app',
 };
 
 const VercelWebsite = memo(() => {

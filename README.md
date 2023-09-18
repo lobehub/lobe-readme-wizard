@@ -59,6 +59,7 @@ Generate lobe style product README _by MAGIC_ \~ 🪄
   - [x] NPM
   - [x] Vercel
   - [x] Discord
+- [ ] 🌏 i18n template support
 - [ ] 📦 Generator by `package.json`
 - [ ] 🪄 Generator features by openAI
 - [ ] ⌨️ CLI tool support

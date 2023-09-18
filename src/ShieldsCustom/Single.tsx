@@ -14,7 +14,7 @@ const controls = {
     ...shieldBaseControls.color,
     value: 'black',
   },
-  link: 'https://github.com/lobehub/lobe-readme-generator',
+  link: 'https://github.com/lobehub/lobe-readme-wizard',
   ...defaultControls,
   /* eslint-enable */
 };

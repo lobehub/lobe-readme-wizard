@@ -1,4 +1,4 @@
-import { ReadmeHero } from '@lobehub/readme-generator';
+import { ReadmeHero } from '@lobehub/readme-wizard';
 import { Center } from 'react-layout-kit';
 
 export default () => {
