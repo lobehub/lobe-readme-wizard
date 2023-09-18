@@ -79,7 +79,7 @@ export const genGithubActionShield = (options: GithubActionShieldOptions) => {
     query: { label: workflow, logo: 'githubactions', logoColor: 'white', ...query },
     url: urlJoin(SHIELD_GITHUB_URL, 'actions/workflow/status', owner, repo, workflow + '.yml'),
   });
-  const defLink = urlJoin(GITHUB_URL, 'actions/workflows', owner, repo, workflow + '.yml');
+  const defLink = urlJoin(GITHUB_URL, owner, repo, 'actions/workflows', workflow + '.yml');
 
   return genShield(`github-action-${workflow}`, defShield, defLink);
 };

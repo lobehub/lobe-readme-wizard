@@ -108,9 +108,9 @@ This project is [MIT](./LICENSE) licensed.
 [codespaces-shield]: https://github.com/codespaces/badge.svg
 [discord-link]: https://discord.gg/AYFPHvv2jT
 [discord-shield]: https://img.shields.io/discord/1127171173982154893?color=5865F2&label=discord&labelColor=black&logo=discord&logoColor=white&style=flat-square
-[github-action-release-link]: https://github.com/actions/workflows/lobehub/lobe-readme-generator/release.yml
+[github-action-release-link]: https://github.com/lobehub/lobe-readme-generator/actions/workflows/release.yml
 [github-action-release-shield]: https://img.shields.io/github/actions/workflow/status/lobehub/lobe-readme-generator/release.yml?label=release&labelColor=black&logo=githubactions&logoColor=white&style=flat-square
-[github-action-test-link]: https://github.com/actions/workflows/lobehub/lobe-readme-generator/test.yml
+[github-action-test-link]: https://github.com/lobehub/lobe-readme-generator/actions/workflows/test.yml
 [github-action-test-shield]: https://img.shields.io/github/actions/workflow/status/lobehub/lobe-readme-generator/test.yml?label=test&labelColor=black&logo=githubactions&logoColor=white&style=flat-square
 [github-contrib-link]: https://github.com/lobehub/lobe-readme-generator/graphs/contributors
 [github-contrib-shield]: https://contrib.rocks/image?repo=lobehub%2Flobe-readme-generator

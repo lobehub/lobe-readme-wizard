@@ -12,7 +12,6 @@ coverage
 jest*
 _test_
 __test__
-*.test.ts
 
 # umi
 .umi
@@ -29,4 +28,3 @@ logs
 
 # misc
 # add other ignore file below
-.next

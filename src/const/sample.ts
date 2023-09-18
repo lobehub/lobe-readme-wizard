@@ -3,8 +3,7 @@ import urlJoin from 'url-join';
 import { GITHUB_URL, SHIELD_BADGE_URL } from '@/const/url';
 import { genShield } from '@/utils/genShield';
 
-export const featuresSample = `
-## ✨ Features
+export const featuresSample = `## ✨ Features
 
 - [x] 💨 **Quick Deployment**: Using the Vercel platform, you can deploy with just one click and complete the process within 1 minute, without any complex configuration;
 - [x] 💎 **Exquisite UI Design**: With a carefully designed interface, it offers an elegant appearance and smooth interaction. It supports light and dark themes and is mobile-friendly. PWA support provides a more native-like experience;
@@ -16,8 +15,7 @@ export const featuresSample = `
 - [x] 🏬 **Role Market**: A Role Market is provided where users can select their preferred dialogue assistant roles, enriching the content and style of the dialogue;
 `;
 
-export const creditsSample = `
-## 🔗 Links
+export const creditsSample = `## 🔗 Links
 
 ### More Products
 

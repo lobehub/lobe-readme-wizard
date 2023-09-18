@@ -42,16 +42,4 @@ test-output
 
 # misc
 # add other ignore file below
-
-# local env files
-.env*.local
-
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
-.next
-.env
-public/*.js
+bun.lockb

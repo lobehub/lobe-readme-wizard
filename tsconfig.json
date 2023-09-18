@@ -1,39 +1,21 @@
 {
-  "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
-    "target": "ESNext",
+    "baseUrl": ".",
+    "declaration": true,
+    "downlevelIteration": true,
+    "esModuleInterop": true,
+    "jsx": "react-jsx",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
+    "paths": {
+      "@@/*": [".dumi/tmp/*"],
+      "@/*": ["src/*"],
+      "@lobehub/readme-generator": ["src"],
+      "@lobehub/readme-generator/*": ["src/*"]
+    },
+    "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
-    "baseUrl": ".",
-    "types": ["vitest/globals"],
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    "types": ["vitest/globals"]
   },
-  "exclude": ["node_modules"],
-  "include": [
-    "next-env.d.ts",
-    "vitest.config.ts",
-    "src",
-    "tests",
-    "**/*.ts",
-    "**/*.d.ts",
-    "**/*.tsx"
-  ],
-  "ts-node": {
-    "compilerOptions": {
-      "module": "commonjs"
-    }
-  }
+  "include": ["src", "docs", "tests", ".dumirc.ts", "*.ts"]
 }
