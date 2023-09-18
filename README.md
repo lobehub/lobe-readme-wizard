@@ -82,7 +82,7 @@ Or clone it for local development:
 
 ```bash
 $ git clone https://github.com/lobehub/lobe-readme-wizard.git
-$ cd lobe-chat
+$ cd lobe-readme-wizard
 $ bun install
 $ bun dev
 ```
@@ -127,6 +127,8 @@ Contributions of all types are more than welcome, if you are interested in contr
 
 Copyright © 2023 [LobeHub][profile-link]. <br />
 This project is [MIT](./LICENSE) licensed.
+
+> _Generate by [🧙‍♂️ Readme Wizard](https://github.com/lobehub/lobe-readme-wizard 'Generate lobe style product README by MAGIC')_
 
 <!-- LINK GROUP -->
 

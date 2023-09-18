@@ -1,3 +1,4 @@
+import { Typography } from 'antd';
 import { CSSProperties, memo } from 'react';
 import ReactMarkdown from 'react-markdown';
 import rehypeHighlight from 'rehype-highlight';
@@ -23,14 +24,16 @@ const Markdown = memo<MarkdownProps>(({ children, className, style, ...props }) 
   return (
     <article className={cx(styles.container, className)} style={style}>
       <HighlightStyle />
-      <ReactMarkdown
-        className={cx(styles.markdown, styles.scheme)}
-        rehypePlugins={rehypePlugins}
-        remarkPlugins={remarkPlugins}
-        {...props}
-      >
-        {children}
-      </ReactMarkdown>
+      <Typography>
+        <ReactMarkdown
+          className={cx(styles.markdown, styles.scheme)}
+          rehypePlugins={rehypePlugins}
+          remarkPlugins={remarkPlugins}
+          {...props}
+        >
+          {children}
+        </ReactMarkdown>
+      </Typography>
     </article>
   );
 });
