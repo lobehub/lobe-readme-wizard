@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 0.3.1](https://github.com/lobehub/lobe-readme-wizard/compare/v0.3.0...v0.3.1)
+
+<sup>Released on **2023-09-18**</sup>
+
+#### 💄 Styles
+
+- **misc**: Fix style.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Styles
+
+- **misc**: Fix style ([949c7f1](https://github.com/lobehub/lobe-readme-wizard/commit/949c7f1))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ## [Version 0.3.0](https://github.com/lobehub/lobe-readme-wizard/compare/v0.2.1...v0.3.0)
 
 <sup>Released on **2023-09-18**</sup>
