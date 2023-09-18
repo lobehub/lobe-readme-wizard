@@ -2,6 +2,47 @@
 
 # Changelog
 
+## [Version 0.3.0](https://github.com/lobehub/lobe-readme-wizard/compare/v0.2.1...v0.3.0)
+
+<sup>Released on **2023-09-18**</sup>
+
+#### ♻ Code Refactoring
+
+- **misc**: Refactor to dumi.
+
+#### ✨ Features
+
+- **misc**: Update demos.
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix typo.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Code refactoring
+
+- **misc**: Refactor to dumi ([ee3cd5f](https://github.com/lobehub/lobe-readme-wizard/commit/ee3cd5f))
+
+#### What's improved
+
+- **misc**: Update demos ([1515782](https://github.com/lobehub/lobe-readme-wizard/commit/1515782))
+
+#### What's fixed
+
+- **misc**: Fix typo ([d0e4c08](https://github.com/lobehub/lobe-readme-wizard/commit/d0e4c08))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 0.2.1](https://github.com/lobehub/lobe-readme-generator/compare/v0.2.0...v0.2.1)
 
 <sup>Released on **2023-09-18**</sup>
