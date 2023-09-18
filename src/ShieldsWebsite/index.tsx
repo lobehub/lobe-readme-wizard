@@ -2,8 +2,8 @@ import { useControls, useCreateStore } from '@lobehub/ui';
 import { memo, useMemo } from 'react';
 
 import { defaultControls } from '@/ShieldsCustom/share';
+import MarkdownStorybook from '@/components/MarkdownStorybook';
 import { shieldBaseControls } from '@/const/shieldBaseControls';
-import MarkdownStorybook from '@/features/MarkdownStorybook';
 import { genCustomWebsiteShield } from '@/services/genCustomShield';
 
 const controls = {

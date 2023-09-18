@@ -9,8 +9,8 @@
     "paths": {
       "@@/*": [".dumi/tmp/*"],
       "@/*": ["src/*"],
-      "@lobehub/readme-generator": ["src"],
-      "@lobehub/readme-generator/*": ["src/*"]
+      "@lobehub/readme-wizard": ["src"],
+      "@lobehub/readme-wizard/*": ["src/*"]
     },
     "resolveJsonModule": true,
     "skipLibCheck": true,

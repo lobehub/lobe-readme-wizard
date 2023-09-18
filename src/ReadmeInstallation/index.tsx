@@ -1,7 +1,7 @@
 import { useControls, useCreateStore } from '@lobehub/ui';
 import { memo, useMemo } from 'react';
 
-import MarkdownStorybook from '@/features/MarkdownStorybook';
+import MarkdownStorybook from '@/components/MarkdownStorybook';
 import { genMarkdownInstallation } from '@/services/genMarkdownInstallation';
 
 const controls = {

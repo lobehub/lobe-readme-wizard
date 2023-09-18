@@ -2,8 +2,8 @@ import { folder, useControls, useCreateStore } from 'leva';
 import { memo, useMemo } from 'react';
 
 import { defaultControls, defaultControlsExtra } from '@/Readme/share';
-import MarkdownStorybook from '@/features/MarkdownStorybook';
-import { genMarkdownHero } from '@/services/genMarkdonHero';
+import MarkdownStorybook from '@/components/MarkdownStorybook';
+import { genMarkdownHero } from '@/services/genMarkdownHero';
 
 const controls = {
   /* eslint-disable sort-keys-fix/sort-keys-fix */

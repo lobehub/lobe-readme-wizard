@@ -23,16 +23,55 @@ const themeConfig = {
     match: ['/components'],
     pkg: name,
     sourceUrl: false,
+    type: 'doc',
   },
   description: description,
+  docStyle: 'pure',
   footer: 'Made with 🤯 by LobeHub',
-  giscus: {
-    category: 'Q&A',
-    categoryId: 'DIC_kwDOJloKoM4CXsCu',
-    repo: 'lobehub/lobe-ui',
-    repoId: 'R_kgDOJloKoA',
+  footerConfig: {
+    resources: {
+      items: [
+        {
+          description: 'Markdown processor ',
+          openExternal: true,
+          title: 'Remark',
+          url: 'https://github.com/remarkjs',
+        },
+        {
+          description: 'Concise badges',
+          openExternal: true,
+          title: 'Shields',
+          url: 'https://shields.io/',
+        },
+        {
+          description: 'Icons for popular brands',
+          openExternal: true,
+          title: 'Simple Icons',
+          url: 'https://simpleicons.org',
+        },
+        {
+          description: 'Dynamically stats for github',
+          openExternal: true,
+          title: 'Readme Stats',
+          url: 'https://github.com/anuraghazra/github-readme-stats',
+        },
+        {
+          description: 'List of GitHub badges',
+          openExternal: true,
+          title: 'Awesome Badges',
+          url: 'https://github.com/Envoy-VC/awesome-badges',
+        },
+      ],
+      title: 'Resources',
+    },
   },
-  name: 'ReadmeGenerator',
+  giscus: {
+    category: 'Ideas',
+    categoryId: 'DIC_kwDOJloKoM4CXsCu',
+    repo: 'lobehub/lobe-readme-wizard',
+    repoId: 'R_kgDOKTF8TQ',
+  },
+  name: 'ReadmeWizard',
   nav: [
     { link: '/components/readme-hero', title: 'Generator' },
     { link: 'https://simpleicons.org/', mode: 'override', title: 'Icons' },
@@ -42,7 +81,7 @@ const themeConfig = {
     discord: 'https://discord.gg/AYFPHvv2jT',
     github: homepage,
   },
-  title: 'ReadmeGenerator - LobeHub',
+  title: 'ReadmeWizard - LobeHub',
 };
 
 export default defineConfig({
@@ -75,5 +114,5 @@ export default defineConfig({
   }`,
   ],
   themeConfig,
-  title: 'ReadmeGenerator',
+  title: 'ReadmeWizard',
 });

@@ -2,6 +2,7 @@ import { CodeEditor } from '@lobehub/ui';
 import { Segmented } from 'antd';
 import { memo, useState } from 'react';
 import { Flexbox } from 'react-layout-kit';
+import useControlledState from 'use-merge-value';
 
 import Markdown from '@/components/Markdown';
 
@@ -13,23 +14,32 @@ enum Tabs {
   Split = 'split',
 }
 
-const MarkdownEditor = memo<{ children: string }>(({ children }) => {
-  const [tab, setTab] = useState<Tabs>(Tabs.Split);
-  const [code, setCode] = useState<string>(children);
+interface MarkdownEditorProps {
+  onChange: (text: string) => void;
+  value: string;
+}
+
+const MarkdownEditor = memo<MarkdownEditorProps>(({ onChange, value }) => {
+  const [currentValue, setCurrentValue] = useControlledState<string>(value, {
+    defaultValue: value,
+    onChange,
+    value,
+  });
+  const [tab, setTab] = useState<Tabs>(Tabs.Editor);
   const { styles } = useStyles();
 
   const editor = (
     <CodeEditor
       className={styles.editor}
       language={'md'}
-      onValueChange={setCode}
+      onValueChange={setCurrentValue}
       resize={false}
       type={'pure'}
-      value={code}
+      value={currentValue}
     />
   );
 
-  const preview = <Markdown className={styles.markdown}>{code}</Markdown>;
+  const preview = <Markdown className={styles.markdown}>{currentValue}</Markdown>;
 
   return (
     <Flexbox gap={16}>
@@ -37,16 +47,16 @@ const MarkdownEditor = memo<{ children: string }>(({ children }) => {
         onChange={setTab as any}
         options={[
           {
-            label: 'Split',
-            value: Tabs.Split,
-          },
-          {
             label: 'Editor',
             value: Tabs.Editor,
           },
           {
             label: 'Preview',
             value: Tabs.Preview,
+          },
+          {
+            label: 'Split',
+            value: Tabs.Split,
           },
         ]}
         style={{ alignSelf: 'center' }}

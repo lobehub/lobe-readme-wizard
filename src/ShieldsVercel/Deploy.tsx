@@ -1,7 +1,7 @@
 import { useControls, useCreateStore } from '@lobehub/ui';
 import { memo, useMemo } from 'react';
 
-import MarkdownStorybook from '@/features/MarkdownStorybook';
+import MarkdownStorybook from '@/components/MarkdownStorybook';
 import { GenVercelDeployShield } from '@/services/genVercelShield';
 
 import { defaultControls } from './share';

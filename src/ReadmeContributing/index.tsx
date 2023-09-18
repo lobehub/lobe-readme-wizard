@@ -2,7 +2,7 @@ import { useControls, useCreateStore } from '@lobehub/ui';
 import { memo, useMemo } from 'react';
 
 import { defaultControls } from '@/Readme/share';
-import MarkdownStorybook from '@/features/MarkdownStorybook';
+import MarkdownStorybook from '@/components/MarkdownStorybook';
 import { genMarkdownContributing } from '@/services/genMarkdownContributing';
 
 const controls = {

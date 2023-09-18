@@ -1,14 +1,14 @@
 {
-  "name": "@lobehub/readme-generator",
+  "name": "@lobehub/readme-wizard",
   "version": "0.2.1",
-  "description": "Generate an aesthetically pleasing product README through intelligent methods",
+  "description": "Generate lobe style product README by magic",
   "homepage": "https://github.com/lobehub/lobe-readme-generator",
   "bugs": {
-    "url": "https://github.com/lobehub/lobe-readme-generator/issues/new/choose"
+    "url": "https://github.com/lobehub/lobe-readme-wizard/issues/new/choose"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lobehub/lobe-readme-generator.git"
+    "url": "https://github.com/lobehub/lobe-readme-wizard.git"
   },
   "license": "MIT",
   "author": "LobeHub <i@lobehub.com>",

@@ -2,8 +2,8 @@ import { useControls, useCreateStore } from '@lobehub/ui';
 import { folder } from 'leva';
 import { memo, useMemo } from 'react';
 
+import MarkdownStorybook from '@/components/MarkdownStorybook';
 import { npmReleaseControlsPickList } from '@/const/npmShieldControls';
-import MarkdownStorybook from '@/features/MarkdownStorybook';
 import { genNpmReleaseShields } from '@/services/genNpmShield';
 
 import { defaultControlsExtra } from './share';

@@ -20,22 +20,46 @@ interface MarkdownHeroOptions {
   workflow: string;
 }
 export const genMarkdownHero = (options: MarkdownHeroOptions) => {
-  const { logo, logo2, title, description, banner, workflow, packageName, backToTop } = options;
+  const {
+    logo,
+    logo2,
+    title,
+    description,
+    banner,
+    workflow,
+    packageName,
+    backToTop,
+    owner,
+    repo,
+    branch,
+    ...config
+  } = options;
 
-  const [releaseShields, releaseLinks] = genGithubReleaseShields(options, {
-    release: !packageName,
-    releaseDate: true,
-  });
+  const [releaseShields, releaseLinks] = genGithubReleaseShields(
+    { owner, repo, ...config },
+    {
+      release: !packageName,
+      releaseDate: true,
+    },
+  );
 
   const [npmShield, npmLinks] = packageName
-    ? genNpmReleaseShields(options, {
-        release: true,
-      })
+    ? genNpmReleaseShields(
+        { packageName, ...config },
+        {
+          release: true,
+        },
+      )
     : ['', ''];
 
-  const [workflowShields, workflowLinks] = workflow ? genGithubActionsShield(options) : ['', ''];
+  const [workflowShields, workflowLinks] = workflow
+    ? genGithubActionsShield({ owner, repo, workflow, ...config })
+    : ['', ''];
 
-  const [socialShields, socialLinks] = genGithubSocialShields(options, githubSoialControlsPickList);
+  const [socialShields, socialLinks] = genGithubSocialShields(
+    { branch, owner, repo, ...config },
+    githubSoialControlsPickList,
+  );
 
   const logoGroup = logo2
     ? [
@@ -51,7 +75,7 @@ export const genMarkdownHero = (options: MarkdownHeroOptions) => {
   const md = [
     `<div align="center">${backToTop ? '<a name="readme-top"></a>' : ''}`,
     logoGroup,
-    `# ${title}`,
+    `<h1>${title}</h1>`,
     description,
     shieldRows,
     '[Changelog](./CHANGELOG.md) · [Report Bug][github-issues-link] · [Request Feature][github-issues-link]',

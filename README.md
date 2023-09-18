@@ -4,11 +4,11 @@
 
 <img height="120" src="https://registry.npmmirror.com/@lobehub/assets-logo/1.0.0/files/assets/logo-3d.webp">
 <img height="120" src="https://gw.alipayobjects.com/zos/kitchen/qJ3l3EPsdW/split.svg">
-<img height="120" src="https://registry.npmmirror.com/@lobehub/assets-emoji/1.3.0/files/assets/memo.webp">
+<img height="120" src="https://registry.npmmirror.com/@lobehub/assets-emoji-anim/1.0.0/files/assets/man-mage.webp">
 
-<h1 align="center">Readme Generator</h1>
+<h1 align="center">Readme Wizard</h1>
 
-\[WIP] Generate an aesthetically pleasing product README through intelligent methods
+Generate lobe style product README _by MAGIC_ \~ 🪄
 
 [Changelog](./CHANGELOG.md) · [Report Bug][github-issues-link] · [Request Feature][github-issues-link]
 
@@ -24,7 +24,7 @@
 [![][github-issues-shield]][github-issues-link]
 [![][github-license-shield]][github-license-link]
 
-![](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+![](https://github-production-user-asset-6210df.s3.amazonaws.com/17870709/268598243-0db9877a-ae3c-4250-8615-7d8b4f695169.png)
 
 </div>
 
@@ -33,6 +33,7 @@
 
 #### TOC
 
+- [✨ Features](#-features)
 - [⌨️ Local Development](#️-local-development)
 - [🤝 Contributing](#-contributing)
 - [🔗 More Products](#-more-products)
@@ -40,6 +41,33 @@
 ####
 
 </details>
+
+## ✨ Features
+
+- [x] 📝 **Raedme Generator**
+  - [x] Hero
+  - [x] Features
+  - [x] Installation
+  - [x] Development
+  - [x] Contributing
+  - [x] Credits
+  - [x] License
+- [x] 🔖 **Shields Generator**
+  - [x] Custom
+  - [x] Website
+  - [x] Github
+  - [x] NPM
+  - [x] Vercel
+  - [x] Discord
+- [ ] 📦 Generator by `package.json`
+- [ ] 🪄 Generator features by openAI
+- [ ] ⌨️ CLI tool support
+
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
 
 ## ⌨️ Local Development
 
@@ -52,7 +80,7 @@ Or clone it for local development:
 [![][bun-shield]][bun-link]
 
 ```bash
-$ git clone https://github.com/lobehub/lobe-readme-generator.git
+$ git clone https://github.com/lobehub/lobe-readme-wizard.git
 $ cd lobe-chat
 $ bun install
 $ bun dev
@@ -104,30 +132,30 @@ This project is [MIT](./LICENSE) licensed.
 [back-to-top]: https://img.shields.io/badge/-BACK_TO_TOP-black?style=flat-square
 [bun-link]: https://bun.sh
 [bun-shield]: https://img.shields.io/badge/-speedup%20with%20bun-black?logo=bun&style=for-the-badge
-[codespaces-link]: https://codespaces.new/lobehub/lobe-readme-generator
+[codespaces-link]: https://codespaces.new/lobehub/lobe-readme-wizard
 [codespaces-shield]: https://github.com/codespaces/badge.svg
 [discord-link]: https://discord.gg/AYFPHvv2jT
 [discord-shield]: https://img.shields.io/discord/1127171173982154893?color=5865F2&label=discord&labelColor=black&logo=discord&logoColor=white&style=flat-square
-[github-action-release-link]: https://github.com/lobehub/lobe-readme-generator/actions/workflows/release.yml
-[github-action-release-shield]: https://img.shields.io/github/actions/workflow/status/lobehub/lobe-readme-generator/release.yml?label=release&labelColor=black&logo=githubactions&logoColor=white&style=flat-square
-[github-action-test-link]: https://github.com/lobehub/lobe-readme-generator/actions/workflows/test.yml
-[github-action-test-shield]: https://img.shields.io/github/actions/workflow/status/lobehub/lobe-readme-generator/test.yml?label=test&labelColor=black&logo=githubactions&logoColor=white&style=flat-square
-[github-contrib-link]: https://github.com/lobehub/lobe-readme-generator/graphs/contributors
-[github-contrib-shield]: https://contrib.rocks/image?repo=lobehub%2Flobe-readme-generator
-[github-contributors-link]: https://github.com/lobehub/lobe-readme-generator/graphs/contributors
-[github-contributors-shield]: https://img.shields.io/github/contributors/lobehub/lobe-readme-generator?color=c4f042&labelColor=black&style=flat-square
-[github-forks-link]: https://github.com/lobehub/lobe-readme-generator/network/members
-[github-forks-shield]: https://img.shields.io/github/forks/lobehub/lobe-readme-generator?color=8ae8ff&labelColor=black&style=flat-square
-[github-issues-link]: https://github.com/lobehub/lobe-readme-generator/issues
-[github-issues-shield]: https://img.shields.io/github/issues/lobehub/lobe-readme-generator?color=ff80eb&labelColor=black&style=flat-square
-[github-license-link]: https://github.com/lobehub/lobe-readme-generator/blob/main/LICENSE
-[github-license-shield]: https://img.shields.io/github/license/lobehub/lobe-readme-generator?color=white&labelColor=black&style=flat-square
-[github-release-link]: https://github.com/lobehub/lobe-readme-generator/releases
-[github-release-shield]: https://img.shields.io/github/v/release/lobehub/lobe-readme-generator?logo=github&color=369eff&labelColor=black&style=flat-square
-[github-releasedate-link]: https://github.com/lobehub/lobe-readme-generator/releases
-[github-releasedate-shield]: https://img.shields.io/github/release-date/lobehub/lobe-readme-generator?labelColor=black&style=flat-square
-[github-stars-link]: https://github.com/lobehub/lobe-readme-generator/network/stargazers
-[github-stars-shield]: https://img.shields.io/github/stars/lobehub/lobe-readme-generator?color=ffcb47&labelColor=black&style=flat-square
+[github-action-release-link]: https://github.com/lobehub/lobe-readme-wizard/actions/workflows/release.yml
+[github-action-release-shield]: https://img.shields.io/github/actions/workflow/status/lobehub/lobe-readme-wizard/release.yml?label=release&labelColor=black&logo=githubactions&logoColor=white&style=flat-square
+[github-action-test-link]: https://github.com/lobehub/lobe-readme-wizard/actions/workflows/test.yml
+[github-action-test-shield]: https://img.shields.io/github/actions/workflow/status/lobehub/lobe-readme-wizard/test.yml?label=test&labelColor=black&logo=githubactions&logoColor=white&style=flat-square
+[github-contrib-link]: https://github.com/lobehub/lobe-readme-wizard/graphs/contributors
+[github-contrib-shield]: https://contrib.rocks/image?repo=lobehub%2Flobe-readme-wizard
+[github-contributors-link]: https://github.com/lobehub/lobe-readme-wizard/graphs/contributors
+[github-contributors-shield]: https://img.shields.io/github/contributors/lobehub/lobe-readme-wizard?color=c4f042&labelColor=black&style=flat-square
+[github-forks-link]: https://github.com/lobehub/lobe-readme-wizard/network/members
+[github-forks-shield]: https://img.shields.io/github/forks/lobehub/lobe-readme-wizard?color=8ae8ff&labelColor=black&style=flat-square
+[github-issues-link]: https://github.com/lobehub/lobe-readme-wizard/issues
+[github-issues-shield]: https://img.shields.io/github/issues/lobehub/lobe-readme-wizard?color=ff80eb&labelColor=black&style=flat-square
+[github-license-link]: https://github.com/lobehub/lobe-readme-wizard/blob/main/LICENSE
+[github-license-shield]: https://img.shields.io/github/license/lobehub/lobe-readme-wizard?color=white&labelColor=black&style=flat-square
+[github-release-link]: https://github.com/lobehub/lobe-readme-wizard/releases
+[github-release-shield]: https://img.shields.io/github/v/release/lobehub/lobe-readme-wizard?logo=github&color=369eff&labelColor=black&style=flat-square
+[github-releasedate-link]: https://github.com/lobehub/lobe-readme-wizard/releases
+[github-releasedate-shield]: https://img.shields.io/github/release-date/lobehub/lobe-readme-wizard?labelColor=black&style=flat-square
+[github-stars-link]: https://github.com/lobehub/lobe-readme-wizard/network/stargazers
+[github-stars-shield]: https://img.shields.io/github/stars/lobehub/lobe-readme-wizard?color=ffcb47&labelColor=black&style=flat-square
 [lobe-chat]: https://github.com/lobehub/lobe-chat
 [lobe-commit]: https://github.com/lobehub/lobe-commit/tree/master/packages/lobe-commit
 [lobe-i18n]: https://github.com/lobehub/lobe-commit/tree/master/packages/lobe-i18n
@@ -136,5 +164,5 @@ This project is [MIT](./LICENSE) licensed.
 [pr-welcome-link]: https://github.com/lobehub/lobe-chat/pulls
 [pr-welcome-shield]: https://img.shields.io/badge/🤯_pr_welcome-%E2%86%92-ffcb47?labelColor=black&style=for-the-badge
 [profile-link]: https://github.com/lobehub
-[vecel-link]: https://lobe-readme-generator.vercel.app
-[vecel-shield]: https://img.shields.io/website?down_message=offline&label=vecel&labelColor=black&logo=vercel&style=flat-square&up_message=online&url=https%3A%2F%2Flobe-readme-generator.vercel.app
+[vecel-link]: https://lobe-readme-wizard.vercel.app
+[vecel-shield]: https://img.shields.io/website?down_message=offline&label=vecel&labelColor=black&logo=vercel&style=flat-square&up_message=online&url=https%3A%2F%2Flobe-readme-wizard.vercel.app
