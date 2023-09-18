@@ -1,4 +1,3 @@
-import { SiGithub, SiMarkdown, SiNpm, SiVercel } from '@icons-pack/react-simple-icons';
 import { Segmented, SegmentedProps } from 'antd';
 import { useTheme } from 'antd-style';
 import { memo, useState } from 'react';
@@ -20,19 +19,19 @@ enum Tab {
 
 const options: SegmentedProps['options'] = [
   {
-    label: <Label icon={SiMarkdown} title={'Custom'} />,
+    label: <Label title={'Custom'} />,
     value: Tab.Custom,
   },
   {
-    label: <Label icon={SiGithub} title={'Github'} />,
+    label: <Label title={'Github'} />,
     value: Tab.Github,
   },
   {
-    label: <Label icon={SiNpm} title={'NPM'} />,
+    label: <Label title={'NPM'} />,
     value: Tab.Npm,
   },
   {
-    label: <Label icon={SiVercel} title={'Vercel'} />,
+    label: <Label title={'Vercel'} />,
     value: Tab.Vercel,
   },
 ];
