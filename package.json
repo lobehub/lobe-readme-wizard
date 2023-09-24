@@ -73,7 +73,7 @@
     "rehype-raw": "^7",
     "remark-gfm": "^3",
     "remark-slug": "^7",
-    "remark-toc": "^8",
+    "remark-toc": "^9.0.0",
     "simple-icons": "^9",
     "swr": "^2",
     "url-join": "^5",
