@@ -16,8 +16,11 @@ export const useStyles = createStyles(({ css, token }) => {
     markdown: css`
       overflow-x: hidden;
       overflow-y: auto;
+
       width: 100%;
       height: 100%;
+
+      background: ${token.colorBgContainer};
     `,
     preview: css`
       border-top: 1px solid ${token.colorBorder};

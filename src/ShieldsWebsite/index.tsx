@@ -4,7 +4,7 @@ import { memo, useMemo } from 'react';
 import { defaultControls } from '@/ShieldsCustom/share';
 import MarkdownStorybook from '@/components/MarkdownStorybook';
 import { shieldBaseControls } from '@/const/shieldBaseControls';
-import { genCustomWebsiteShield } from '@/services/genCustomShield';
+import { genWebsiteShield } from '@/services/genCustomShield';
 
 const controls = {
   /* eslint-disable sort-keys-fix/sort-keys-fix */
@@ -20,14 +20,14 @@ const controls = {
   /* eslint-enable */
 };
 
-const CustomWebsite = memo(() => {
+const Website = memo(() => {
   const store = useCreateStore();
 
   const options = useControls(controls, { store });
 
-  const md = useMemo(() => genCustomWebsiteShield(options), [options]);
+  const md = useMemo(() => genWebsiteShield(options), [options]);
 
   return <MarkdownStorybook levaStore={store}>{md.join('\n\n')}</MarkdownStorybook>;
 });
 
-export default CustomWebsite;
+export default Website;

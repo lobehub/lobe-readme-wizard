@@ -49,14 +49,14 @@ export const genCustomDoubleShield = (options: CustomDoubleShieldOptions) => {
   return genShield(content || label, url, link);
 };
 
-interface CustomWebsiteShieldOptions extends ShieldsBaseOptions {
+interface WebsiteShieldOptions extends ShieldsBaseOptions {
   down_message: string;
   label: string;
   up_message: string;
   url: string;
 }
 
-export const genCustomWebsiteShield = (options: CustomWebsiteShieldOptions) => {
+export const genWebsiteShield = (options: WebsiteShieldOptions) => {
   const url = qs.stringifyUrl({
     query: pickBy(options, identity) as any,
     url: urlJoin(SHIELD_URL, 'website'),
@@ -65,18 +65,40 @@ export const genCustomWebsiteShield = (options: CustomWebsiteShieldOptions) => {
   return genShield(options.label, url, options.url);
 };
 
-interface CustomDiscordShieldOptions extends ShieldsBaseOptions {
+interface DiscordShieldOptions extends ShieldsBaseOptions {
   label: string;
   serverId: string;
 }
 
-export const genCustomDiscordShield = (options: CustomDiscordShieldOptions) => {
+export const genDiscordShield = (options: DiscordShieldOptions) => {
   const { serverId, link, ...config } = options;
   const query = pickBy(config, identity) as any;
   const url = qs.stringifyUrl({
-    query: { color: '5865F2', logo: 'discord', logoColor: 'white', ...query },
+    query: { logo: 'discord', ...query },
     url: urlJoin(SHIELD_URL, 'discord', String(serverId)),
   });
 
-  return genShield(options.label, url, link);
+  return genShield('discord', url, link);
+};
+
+interface BilibiliShieldOptions extends ShieldsBaseOptions {
+  label: string;
+  uid: string;
+}
+
+export const genBilibiliShield = (options: BilibiliShieldOptions) => {
+  const { uid, labelColor, logoColor, ...config } = options;
+  const query = pickBy(config, identity) as any;
+  const url = qs.stringifyUrl({
+    query: {
+      label_color: labelColor,
+      logo_color: logoColor,
+      uid,
+      ...query,
+    },
+    url: 'https://bilistats.lonelyion.com/followers',
+  });
+  const link = urlJoin('https://space.bilibili.com', uid);
+
+  return genShield('bilibili', url, link);
 };

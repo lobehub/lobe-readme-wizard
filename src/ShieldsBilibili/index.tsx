@@ -5,16 +5,15 @@ import { memo, useMemo } from 'react';
 
 import MarkdownStorybook from '@/components/MarkdownStorybook';
 import { shieldBaseControls } from '@/const/shieldBaseControls';
-import { genDiscordShield } from '@/services/genCustomShield';
+import { genBilibiliShield } from '@/services/genCustomShield';
 
 const controls = {
   /* eslint-disable sort-keys-fix/sort-keys-fix */
-  serverId: {
-    value: '1127171173982154893',
+  uid: {
+    value: '410372',
     type: LevaInputs.STRING,
   },
-  label: 'discord',
-  link: 'https://discord.gg/AYFPHvv2jT',
+  label: 'followers',
   ['⚒️']: folder(
     {
       ...pick(shieldBaseControls, ['style']),
@@ -24,7 +23,7 @@ const controls = {
       },
       color: {
         ...shieldBaseControls.labelColor,
-        value: '5865f2',
+        value: 'fb7299',
       },
       logoColor: {
         ...shieldBaseControls.logoColor,
@@ -38,14 +37,14 @@ const controls = {
   /* eslint-enable */
 };
 
-const Discord = memo(() => {
+const Bilibili = memo(() => {
   const store = useCreateStore();
 
   const options = useControls(controls, { store });
 
-  const md = useMemo(() => genDiscordShield(options), [options]);
+  const md = useMemo(() => genBilibiliShield(options as any), [options]);
 
   return <MarkdownStorybook levaStore={store}>{md.join('\n\n')}</MarkdownStorybook>;
 });
 
-export default Discord;
+export default Bilibili;
