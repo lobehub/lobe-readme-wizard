@@ -1,7 +1,6 @@
 import { identity, pickBy } from 'lodash-es';
 import qs from 'query-string';
 
-import { colorOptions } from '@/const/shieldBaseControls';
 import { ShieldsBaseOptions } from '@/types/shields';
 import { genPickList } from '@/utils/genPickList';
 
@@ -27,10 +26,9 @@ export const shareShieldControls: {
   [key: string]: shareShieldControlsItem;
 } = {
   /* eslint-disable sort-keys-fix/sort-keys-fix */
-  twitter: {
-    logo: 'twitter',
+  x: {
+    logo: 'x',
     logoColor: 'white',
-    color: colorOptions.geekblue,
     genLink: ({ url, title, desc, hashtags }) => {
       const query = pickBy(
         {
@@ -41,7 +39,7 @@ export const shareShieldControls: {
         identity,
       ) as any;
       return qs.stringifyUrl({
-        url: 'https://twitter.com/intent/tweet',
+        url: 'https://x.com/intent/tweet',
         query,
       });
     },
@@ -49,7 +47,6 @@ export const shareShieldControls: {
   telegram: {
     logo: 'telegram',
     logoColor: 'white',
-    color: colorOptions.geekblue,
     genLink: ({ url, title, desc, hashtags }) => {
       const query = pickBy(
         {
@@ -72,7 +69,6 @@ export const shareShieldControls: {
   whatsapp: {
     logo: 'whatsapp',
     logoColor: 'white',
-    color: colorOptions.geekblue,
     genLink: ({ url, title, desc, hashtags }) => {
       const query = pickBy(
         {
@@ -95,7 +91,6 @@ export const shareShieldControls: {
   weibo: {
     logo: 'sinaweibo',
     logoColor: 'white',
-    color: colorOptions.geekblue,
     genLink: ({ url, title, desc, hashtags }) => {
       const query = pickBy(
         {
@@ -119,7 +114,6 @@ export const shareShieldControls: {
   qq: {
     logo: 'tencentqq',
     logoColor: 'white',
-    color: colorOptions.geekblue,
     genLink: ({ url, title, desc, hashtags }) => {
       const query = pickBy(
         {

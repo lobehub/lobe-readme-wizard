@@ -17,11 +17,7 @@ const controls = {
   link: 'https://discord.gg/AYFPHvv2jT',
   ['⚒️']: folder(
     {
-      ...pick(shieldBaseControls, ['style']),
-      labelColor: {
-        ...shieldBaseControls.labelColor,
-        value: 'black',
-      },
+      ...pick(shieldBaseControls, ['style', 'labelColor']),
       color: {
         ...shieldBaseControls.labelColor,
         value: '5865f2',

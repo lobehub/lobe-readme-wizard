@@ -2,23 +2,30 @@ import { identity, pickBy } from 'lodash-es';
 import qs from 'query-string';
 import urlJoin from 'url-join';
 
-import { shareShieldControls, shareShieldControlsItem } from '@/const/shareShieldControls';
+import { socialShieldControls, socialShieldControlsItem } from '@/const/socialShieldControls';
 import { SHIELD_BADGE_URL } from '@/const/url';
 import { ShieldsBaseOptions } from '@/types/shields';
 import { formatCustomLabel } from '@/utils/formatCustomLabel';
 import { genShield } from '@/utils/genShield';
 
-type ShareShieldOptions = ShieldsBaseOptions &
-  shareShieldControlsItem & {
-    desc?: string;
-    hashtags?: string;
+interface SpcialIdOptions {
+  discord?: string;
+  qq?: string;
+  steam?: string;
+  wechat?: string;
+  weibo?: string;
+  x?: string;
+}
+
+type SocialShieldOptions = ShieldsBaseOptions &
+  socialShieldControlsItem & {
+    id: string;
     name: string;
-    title?: string;
-    url?: string;
+    prefix: boolean;
   };
 
-export const genShareShield = (options: ShareShieldOptions) => {
-  const { name, genLink, title, desc, hashtags, url, color, label, ...config } = options;
+export const genSocialShield = (options: SocialShieldOptions) => {
+  const { name, genLink, id, color, prefix, ...config } = options;
 
   const defShield = qs.stringifyUrl({
     query: pickBy(config, identity) as any,
@@ -26,30 +33,32 @@ export const genShareShield = (options: ShareShieldOptions) => {
       SHIELD_BADGE_URL,
       formatCustomLabel({
         color: (color as string) || 'black',
-        label: `share on ${label}`,
+        label: `${prefix ? '@' : ''}${id}`,
       }),
     ),
   });
-  const defLink = genLink?.({ desc, hashtags, title, url });
+  const defLink = genLink?.(id);
 
-  return genShield(`share-${name}`, defShield, defLink);
+  return genShield(`social-${name}`, defShield, defLink);
 };
 
-export const genShareShields = (
-  options: Partial<ShareShieldOptions> | any,
+export const genSocialShields = (
+  options: Partial<SocialShieldOptions> | any,
+  idOptions: SpcialIdOptions,
   pickOptions: { [key: string]: boolean },
 ) => {
   const defShields: string[] = [];
   const defLinks: string[] = [];
 
-  for (const [name, config] of Object.entries(shareShieldControls)) {
+  for (const [name, config] of Object.entries(socialShieldControls)) {
     if (!pickOptions[name]) continue;
-    const data = genShareShield({
+    const data = genSocialShield({
       name,
       ...config,
       ...options,
       color: options.color || config.color,
-      label: name,
+      // @ts-ignore
+      id: idOptions?.[name],
     });
     defShields.push(data[0]);
     defLinks.push(data[1]);
