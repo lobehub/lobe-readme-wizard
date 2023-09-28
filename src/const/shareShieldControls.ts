@@ -83,7 +83,29 @@ export const shareShieldControls: {
         identity,
       ) as any;
       return qs.stringifyUrl({
-        url: 'https://api.whatsapp.com/send"',
+        url: 'https://api.whatsapp.com/send',
+        query,
+      });
+    },
+  },
+  reddit: {
+    logo: 'reddit',
+    logoColor: 'white',
+    genLink: ({ url, title, desc, hashtags }) => {
+      const query = pickBy(
+        {
+          title: [
+            [title, desc].filter(Boolean).join(' - '),
+            hashtags && stringifyHashtags(hashtags, ' ', '#'),
+          ]
+            .filter(Boolean)
+            .join(' '),
+          url,
+        },
+        identity,
+      ) as any;
+      return qs.stringifyUrl({
+        url: 'https://www.reddit.com/submit',
         query,
       });
     },
