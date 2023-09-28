@@ -5,6 +5,7 @@ export { default as ReadmeFeatures } from './ReadmeFeatures';
 export { default as ReadmeHero } from './ReadmeHero';
 export { default as ReadmeInstallation } from './ReadmeInstallation';
 export { default as ReadmeLicense } from './ReadmeLicense';
+export { default as ShieldsBilibili } from './ShieldsBilibili';
 export * from './ShieldsCustom';
 export { default as ShieldsDiscord } from './ShieldsDiscord';
 export * from './ShieldsGithub';
