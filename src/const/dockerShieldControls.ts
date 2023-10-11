@@ -21,6 +21,7 @@ export const dockerShieldControls: {
   release: {
     logo: 'docker',
     logoColor: 'white',
+    label: 'docker',
     color: colorOptions.geekblue,
     genLink,
     url: urlJoin(SHIELD_DOCKER_URL, 'v'),
@@ -32,7 +33,7 @@ export const dockerShieldControls: {
   },
   pulls: {
     genLink,
-    color: colorOptions.green,
+    color: '45cc11',
     url: urlJoin(SHIELD_DOCKER_URL, 'pulls'),
   },
   /* eslint-enable */
