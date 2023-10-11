@@ -13,7 +13,7 @@ export interface NpmShieldControlItem extends Partial<ShieldsBaseOptions> {
 
 const genLink: NpmShieldControlItem['genLink'] = (packageName) => urlJoin(NPM_URL, packageName);
 
-export const npmReleaseControls: {
+export const npmShieldControls: {
   [key: string]: NpmShieldControlItem;
 } = {
   /* eslint-disable sort-keys-fix/sort-keys-fix */
@@ -35,4 +35,4 @@ export const npmReleaseControls: {
   /* eslint-enable */
 };
 
-export const npmReleaseControlsPickList = genPickList(npmReleaseControls);
+export const npmShieldControlsPickList = genPickList(npmShieldControls);

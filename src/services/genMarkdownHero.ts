@@ -1,10 +1,10 @@
-import { githubSoialControlsPickList } from '@/const/githubShieldControls';
+import { githubSocialControlsPickList } from '@/const/githubShieldControls';
 import {
   genGithubActionsShield,
   genGithubReleaseShields,
   genGithubSocialShields,
 } from '@/services/genGithubShield';
-import { genNpmReleaseShields } from '@/services/genNpmShield';
+import { genNpmShields } from '@/services/genNpmShield';
 
 interface MarkdownHeroOptions {
   backToTop?: boolean;
@@ -44,7 +44,7 @@ export const genMarkdownHero = (options: MarkdownHeroOptions) => {
   );
 
   const [npmShield, npmLinks] = packageName
-    ? genNpmReleaseShields(
+    ? genNpmShields(
         { packageName, ...config },
         {
           release: true,
@@ -58,7 +58,7 @@ export const genMarkdownHero = (options: MarkdownHeroOptions) => {
 
   const [socialShields, socialLinks] = genGithubSocialShields(
     { branch, owner, repo, ...config },
-    githubSoialControlsPickList,
+    githubSocialControlsPickList,
   );
 
   const logoGroup = logo2

@@ -4,8 +4,8 @@ import urlJoin from 'url-join';
 
 import {
   GithubShieldControlItem,
-  githubReleaseControls,
-  githubSoialControls,
+  githubShieldControls,
+  githubSocialControls,
 } from '@/const/githubShieldControls';
 import {
   GITHUBE_CONTRIB_URL,
@@ -41,7 +41,7 @@ export const genGithubSocialShields = (
   const defShields: string[] = [];
   const defLinks: string[] = [];
 
-  for (const [name, config] of Object.entries(githubSoialControls)) {
+  for (const [name, config] of Object.entries(githubSocialControls)) {
     if (!pickOptions[name]) continue;
     const data = genGithubShield({ name, ...options, ...config });
     defShields.push(data[0]);
@@ -57,7 +57,7 @@ export const genGithubReleaseShields = (
   const defShields: string[] = [];
   const defLinks: string[] = [];
 
-  for (const [name, config] of Object.entries(githubReleaseControls)) {
+  for (const [name, config] of Object.entries(githubShieldControls)) {
     if (!pickOptions[name]) continue;
     const data = genGithubShield({ name, ...options, ...config });
     defShields.push(data[0]);

@@ -11,7 +11,7 @@ export interface GithubShieldControlItem extends Partial<ShieldsBaseOptions> {
   url: string;
 }
 
-export const githubSoialControls: {
+export const githubSocialControls: {
   [key: string]: GithubShieldControlItem;
 } = {
   /* eslint-disable sort-keys-fix/sort-keys-fix */
@@ -44,9 +44,9 @@ export const githubSoialControls: {
   /* eslint-enable */
 };
 
-export const githubSoialControlsPickList = genPickList(githubSoialControls);
+export const githubSocialControlsPickList = genPickList(githubSocialControls);
 
-export const githubReleaseControls: {
+export const githubShieldControls: {
   [key: string]: GithubShieldControlItem;
 } = {
   /* eslint-disable sort-keys-fix/sort-keys-fix */
@@ -68,4 +68,4 @@ export const githubReleaseControls: {
   /* eslint-enable */
 };
 
-export const githubReleaseControlsPickList = genPickList(githubReleaseControls);
+export const githubShieldControlsPickList = genPickList(githubShieldControls);

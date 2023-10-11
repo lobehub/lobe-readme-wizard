@@ -3,13 +3,13 @@ import { folder } from 'leva';
 import { memo, useMemo } from 'react';
 
 import MarkdownStorybook from '@/components/MarkdownStorybook';
-import { githubReleaseControlsPickList } from '@/const/githubShieldControls';
+import { githubShieldControlsPickList } from '@/const/githubShieldControls';
 import { genGithubReleaseShields } from '@/services/genGithubShield';
 
 import { defaultControlsExtra } from './share';
 
 const controls = defaultControlsExtra;
-const pickControls = { ['✅']: folder(githubReleaseControlsPickList, { collapsed: true }) };
+const pickControls = { ['✅']: folder(githubShieldControlsPickList, { collapsed: true }) };
 
 const GithubRelease = memo(() => {
   const store = useCreateStore();

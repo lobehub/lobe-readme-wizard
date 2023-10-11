@@ -17,3 +17,7 @@ export interface GithubShieldBaseOptions {
 export interface NpmShieldBaseOptions {
   packageName: string;
 }
+
+export interface DockerShieldBaseOptions {
+  packageName: string;
+}
