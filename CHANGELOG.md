@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 0.7.1](https://github.com/lobehub/lobe-readme-wizard/compare/v0.7.0...v0.7.1)
+
+<sup>Released on **2023-10-11**</sup>
+
+#### 💄 Styles
+
+- **misc**: Update docker shields style.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Styles
+
+- **misc**: Update docker shields style ([7853b56](https://github.com/lobehub/lobe-readme-wizard/commit/7853b56))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ## [Version 0.7.0](https://github.com/lobehub/lobe-readme-wizard/compare/v0.6.1...v0.7.0)
 
 <sup>Released on **2023-10-11**</sup>
