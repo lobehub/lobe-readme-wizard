@@ -2,6 +2,31 @@
 
 # Changelog
 
+## [Version 0.7.0](https://github.com/lobehub/lobe-readme-wizard/compare/v0.6.1...v0.7.0)
+
+<sup>Released on **2023-10-11**</sup>
+
+#### ✨ Features
+
+- **misc**: Add docker shield.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: Add docker shield ([c098ab0](https://github.com/lobehub/lobe-readme-wizard/commit/c098ab0))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 0.6.1](https://github.com/lobehub/lobe-readme-wizard/compare/v0.6.0...v0.6.1)
 
 <sup>Released on **2023-09-28**</sup>
