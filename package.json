@@ -83,7 +83,7 @@
     "zustand-utils": "^1"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17",
+    "@commitlint/cli": "^18.0.0",
     "@lobehub/lint": "latest",
     "@testing-library/react": "^14",
     "@types/lodash-es": "^4",
