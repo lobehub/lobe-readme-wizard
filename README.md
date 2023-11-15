@@ -44,7 +44,7 @@ Generate lobe style product README _by MAGIC_ \~ 🪄
 
 ## ✨ Features
 
-- [x] 📝 **Raedme Generator**
+- [x] 📝 **Readme Generator**
   - [x] Hero
   - [x] Features
   - [x] Installation
