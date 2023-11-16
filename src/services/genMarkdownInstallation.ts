@@ -15,7 +15,7 @@ export const genMarkdownInstallation = (options: MarkdownInstallationOptions) =>
   const [bunShield, bunLink] = bunShields;
 
   const esmBlock = `
-> **Important**\\
+> [!IMPORTANT]\\
 > This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c).
   `;
 
@@ -32,7 +32,7 @@ $ ${bun ? 'bun add' : 'pnpm install'} ${packageName}
   const nextjsBlock = `
 ### Compile with Next.js
 
-> **Note**\\
+> [!NOTE]\\
 > By work correct with Next.js SSR, add \`transpilePackages: ['${packageName}']\` to \`next.config.js\`. For example:
 
 \`\`\`js
