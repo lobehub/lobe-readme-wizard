@@ -10,8 +10,6 @@ export default () => {
     {
       avatarSize: 64,
       id: 'lobehub',
-      padding: 0,
-      width: 800,
     },
     { store },
   );

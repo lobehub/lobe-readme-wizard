@@ -23,8 +23,8 @@ __test__
 # production
 dist
 es
-lib
 logs
 
 # misc
 # add other ignore file below
+lib

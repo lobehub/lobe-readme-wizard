@@ -88,15 +88,14 @@ export interface SponsorProps {
   groupBy?: TierItem[];
   height?: number;
   padding?: number;
+  style?: CSSProperties;
   texts?: [string, string];
   themeMode?: 'light' | 'dark';
   width?: number;
 }
 
 const Sponsor: FC<SponsorProps> = ({
-  padding,
-  width = 800,
-  height,
+  style,
   data,
   groupBy = DEFAULT_GROUP,
   fallbackTier = '🌟 One Time',
@@ -132,9 +131,7 @@ const Sponsor: FC<SponsorProps> = ({
         display: 'flex',
         flexWrap: 'wrap',
         gap: avatarSize / 8,
-        height,
-        padding,
-        width,
+        ...style,
       }}
     >
       {sortedData().map((item) => {
@@ -177,7 +174,6 @@ const Sponsor: FC<SponsorProps> = ({
                 justifyContent: 'center',
                 marginTop: -avatarSize / 6,
                 padding: avatarSize / 16,
-                zIndex: 2,
               }}
             >
               {`${tierConfig.emoji} ${
@@ -202,8 +198,8 @@ const Sponsor: FC<SponsorProps> = ({
           padding: `${avatarSize / 8}px ${avatarSize / 6}px`,
         }}
       >
-        <div style={{ fontSize: avatarSize / 6 }}>{texts[0]}</div>
-        <div style={{ fontSize: avatarSize / 4, fontWeight: 'bold' }}>
+        <div style={{ display: 'flex', fontSize: avatarSize / 6 }}>{texts[0]}</div>
+        <div style={{ display: 'flex', fontSize: avatarSize / 4, fontWeight: 'bold' }}>
           {`${texts[1]} `}
           <span style={{ color: '#DC485F' }}>S</span>
           <span style={{ color: '#AB4ABB' }}>p</span>

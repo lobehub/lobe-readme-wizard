@@ -27,7 +27,6 @@ coverage
 # production
 dist
 es
-lib
 logs
 test-output
 
@@ -43,3 +42,4 @@ test-output
 # misc
 # add other ignore file below
 bun.lockb
+.vercel
