@@ -56,6 +56,7 @@
   "dependencies": {
     "@babel/runtime": "^7",
     "@lobehub/ui": "latest",
+    "@vercel/og": "^0.5.20",
     "ahooks": "^3",
     "antd": "^5",
     "antd-style": "^3",
@@ -75,7 +76,7 @@
     "remark-slug": "^7",
     "remark-toc": "^8",
     "simple-icons": "^9",
-    "swr": "^2",
+    "swr": "^2.2.4",
     "url-join": "^5",
     "use-merge-value": "^1",
     "utility-types": "^3",
