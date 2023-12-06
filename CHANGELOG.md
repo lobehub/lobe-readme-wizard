@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 0.8.2](https://github.com/lobehub/lobe-readme-wizard/compare/v0.8.1...v0.8.2)
+
+<sup>Released on **2023-12-06**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Debug.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Debug ([d064561](https://github.com/lobehub/lobe-readme-wizard/commit/d064561))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 0.8.1](https://github.com/lobehub/lobe-readme-wizard/compare/v0.8.0...v0.8.1)
 
 <sup>Released on **2023-12-06**</sup>
