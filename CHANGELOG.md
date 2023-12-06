@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 0.8.3](https://github.com/lobehub/lobe-readme-wizard/compare/v0.8.2...v0.8.3)
+
+<sup>Released on **2023-12-06**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix @vercel/og.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix @vercel/og ([d198d99](https://github.com/lobehub/lobe-readme-wizard/commit/d198d99))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 0.8.2](https://github.com/lobehub/lobe-readme-wizard/compare/v0.8.1...v0.8.2)
 
 <sup>Released on **2023-12-06**</sup>
