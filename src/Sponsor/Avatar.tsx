@@ -1,6 +1,6 @@
-import { CSSProperties, FC } from 'react';
+import type { CSSProperties, FC } from 'react';
 
-import { theme } from '@/Sponsor/style';
+import { theme } from './style';
 
 interface AvatarProps {
   name: string;

@@ -1,7 +1,7 @@
-import { CSSProperties, FC } from 'react';
+import type { CSSProperties, FC } from 'react';
 
-import { Avatar } from '@/Sponsor/Avatar';
-import { theme } from '@/Sponsor/style';
+import { Avatar } from './Avatar';
+import { theme } from './style';
 
 interface MemberProfile {
   MemberId: number;
