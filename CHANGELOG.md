@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 0.8.1](https://github.com/lobehub/lobe-readme-wizard/compare/v0.8.0...v0.8.1)
+
+<sup>Released on **2023-12-06**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix import.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix import ([ba6dd2b](https://github.com/lobehub/lobe-readme-wizard/commit/ba6dd2b))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ## [Version 0.8.0](https://github.com/lobehub/lobe-readme-wizard/compare/v0.7.2...v0.8.0)
 
 <sup>Released on **2023-12-06**</sup>
