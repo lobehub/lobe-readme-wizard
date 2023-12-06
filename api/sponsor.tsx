@@ -39,10 +39,9 @@ export default async function handler(request: Request): Promise<any> {
   try {
     const { searchParams } = new URL(request.url);
 
-    const avatarSize = getNumber(searchParams.get('avatarSize'));
-    const width = getNumber(searchParams.get('width'), 800);
-    const height = getNumber(searchParams.get('height'), 88);
-    const padding = getNumber(searchParams.get('padding'));
+    const avatarSize = getNumber(searchParams.get('avatarSize'), 64 * 2);
+    const width = getNumber(searchParams.get('width'), 800 * 2);
+    const height = getNumber(searchParams.get('height'), 88 * 2);
     const themeMode = searchParams.get('themeMode') === 'dark' ? 'dark' : 'light';
     const id = searchParams.get('id') || 'lobehub';
     const data = (await getData(id)) as any;
@@ -53,7 +52,6 @@ export default async function handler(request: Request): Promise<any> {
         <Sponsor
           avatarSize={avatarSize}
           data={data}
-          padding={padding}
           style={{ fontFamily: '"HarmonyOS Sans"' }}
           themeMode={themeMode}
           width={width}
