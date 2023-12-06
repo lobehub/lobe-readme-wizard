@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 0.8.6](https://github.com/lobehub/lobe-readme-wizard/compare/v0.8.5...v0.8.6)
+
+<sup>Released on **2023-12-06**</sup>
+
+#### 💄 Styles
+
+- **misc**: Add auto height to sponsor.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Styles
+
+- **misc**: Add auto height to sponsor ([e1cbb69](https://github.com/lobehub/lobe-readme-wizard/commit/e1cbb69))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 0.8.5](https://github.com/lobehub/lobe-readme-wizard/compare/v0.8.4...v0.8.5)
 
 <sup>Released on **2023-12-06**</sup>
