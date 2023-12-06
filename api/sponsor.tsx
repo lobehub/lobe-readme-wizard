@@ -2,50 +2,25 @@ import { ImageResponse } from '@vercel/og';
 
 import cors from '../lib/cors';
 import Sponsor from '../src/Sponsor';
+import { caleHeight, fechOpenCollectiveData, fetchFonts, getNumber } from '../src/Sponsor/utils';
 
-const fetchFonts = async () => {
-  // Regular Font
-  const fontFileRegular = await fetch(
-    'https://gw.alipayobjects.com/os/kitchen/BUfo9kyDYs/HarmonyOS_Sans_Regular.ttf',
-  );
-  const fontRegular: ArrayBuffer = await fontFileRegular.arrayBuffer();
-
-  // Bold Font
-  const fontFileBold = await fetch(
-    'https://gw.alipayobjects.com/os/kitchen/ywwdIaXDZa/HarmonyOS_Sans_Bold.ttf',
-  );
-  const fontBold: ArrayBuffer = await fontFileBold.arrayBuffer();
-
-  return { fontBold, fontRegular };
-};
+const MULTIPLE = 2;
 
 export const config = {
   runtime: 'edge',
 };
 
-const getNumber = (value: string | null, defaultValue?: number) => {
-  if (!value || value === null) return defaultValue;
-  const parsed = Number.parseInt(value, 10);
-  if (Number.isNaN(parsed)) return defaultValue;
-  return parsed;
-};
-
-const getData = async (id: string) => {
-  const res = await fetch(`https://opencollective.com/${id}/members/all.json`);
-  const json = await res.json();
-  return json;
-};
 export default async function handler(request: Request): Promise<any> {
   try {
     const { searchParams } = new URL(request.url);
 
-    const avatarSize = getNumber(searchParams.get('avatarSize'), 64 * 2);
-    const width = getNumber(searchParams.get('width'), 800 * 2);
-    const height = getNumber(searchParams.get('height'), 88 * 2);
+    const avatarSize = getNumber(searchParams.get('avatarSize'), 64 * MULTIPLE);
+    const width = getNumber(searchParams.get('width'), 800 * MULTIPLE);
     const themeMode = searchParams.get('themeMode') === 'dark' ? 'dark' : 'light';
     const id = searchParams.get('id') || 'lobehub';
-    const data = (await getData(id)) as any;
+    const data = await fechOpenCollectiveData(id);
     const { fontBold, fontRegular } = await fetchFonts();
+    const height = caleHeight(data, { avatarSize, width });
 
     const res = new ImageResponse(
       (

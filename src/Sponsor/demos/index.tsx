@@ -3,32 +3,42 @@ import { StoryBook, useControls, useCreateStore } from '@lobehub/ui';
 import { useThemeMode } from 'antd-style';
 import useSWR from 'swr';
 
+import { DEFAULT_AVATAR_SIZE, DEFAULT_WIDTH } from '../const';
+import { caleHeight, fechOpenCollectiveData } from '../utils';
+
 export default () => {
   const { isDarkMode } = useThemeMode();
   const store = useCreateStore();
-  const { id, ...config } = useControls(
+  const { id, width, avatarSize } = useControls(
     {
-      avatarSize: 64,
+      avatarSize: {
+        step: 1,
+        value: DEFAULT_AVATAR_SIZE,
+      },
       id: 'lobehub',
+      width: {
+        step: 1,
+        value: DEFAULT_WIDTH,
+      },
     },
     { store },
   );
-  const { data, isLoading } = useSWR(
-    id,
-    async () => {
-      const res = await fetch(`https://opencollective.com/${id}/members/all.json`);
-      const json = await res.json();
-      return json;
-    },
-    { revalidateOnFocus: false },
-  );
+  const { data, isLoading } = useSWR(id, fechOpenCollectiveData, { revalidateOnFocus: false });
 
   return (
     <StoryBook levaStore={store}>
       {isLoading || !data ? (
         <div>loading...</div>
       ) : (
-        <Sponsor data={data} themeMode={isDarkMode ? 'dark' : 'light'} {...config} />
+        <div
+          style={{
+            height: caleHeight(data, { avatarSize, width }),
+            overflow: 'hidden',
+            width,
+          }}
+        >
+          <Sponsor avatarSize={avatarSize} data={data} themeMode={isDarkMode ? 'dark' : 'light'} />
+        </div>
       )}
     </StoryBook>
   );
