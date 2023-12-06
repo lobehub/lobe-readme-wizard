@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 0.8.7](https://github.com/lobehub/lobe-readme-wizard/compare/v0.8.6...v0.8.7)
+
+<sup>Released on **2023-12-06**</sup>
+
+#### 💄 Styles
+
+- **misc**: Update sponsor style.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Styles
+
+- **misc**: Update sponsor style ([cddd270](https://github.com/lobehub/lobe-readme-wizard/commit/cddd270))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 0.8.6](https://github.com/lobehub/lobe-readme-wizard/compare/v0.8.5...v0.8.6)
 
 <sup>Released on **2023-12-06**</sup>
