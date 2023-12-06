@@ -1,5 +1,7 @@
 import { ImageResponse } from '@vercel/og';
 
+import Sponsor from '../src/Sponsor';
+
 export const config = {
   runtime: 'edge',
 };
@@ -30,19 +32,20 @@ export default async function handler(request: Request): Promise<any> {
 
     return new ImageResponse(
       (
-        <div>
-          🤯❤️{avatarSize}
-          {padding}
-          {themeMode}
-          {JSON.stringify(data)}
-        </div>
+        <Sponsor
+          avatarSize={avatarSize}
+          data={data}
+          padding={padding}
+          themeMode={themeMode}
+          width={width}
+        />
       ),
       {
         emoji: 'fluent',
         headers: {
-          'CDN-Cache-Control': 'public, s-maxage=60',
-          'Cache-Control': 'public, s-maxage=1',
+          'CDN-Cache-Control': 'public, s-maxage=120',
           'Vercel-CDN-Cache-Control': 'public, s-maxage=3600',
+          'cache-control': 'public, max-age=120, s-maxage=120',
           'content-type': 'image/png',
         },
         height,

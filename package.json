@@ -56,7 +56,7 @@
   "dependencies": {
     "@babel/runtime": "^7",
     "@lobehub/ui": "latest",
-    "@vercel/og": "^0.5.20",
+    "@vercel/og": "0.5.18",
     "ahooks": "^3",
     "antd": "^5",
     "antd-style": "^3",
@@ -75,7 +75,6 @@
     "remark-gfm": "^3",
     "remark-slug": "^7",
     "remark-toc": "^8",
-    "satori": "^0.10.11",
     "simple-icons": "^10.0.0",
     "swr": "^2.2.4",
     "url-join": "^5",
