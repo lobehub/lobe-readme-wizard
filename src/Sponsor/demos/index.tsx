@@ -4,7 +4,7 @@ import { useThemeMode } from 'antd-style';
 import useSWR from 'swr';
 
 import { DEFAULT_AVATAR_SIZE, DEFAULT_WIDTH } from '../const';
-import { caleHeight, fechOpenCollectiveData } from '../utils';
+import { caleHeight, fetchOpenCollectiveData } from '../utils';
 
 export default () => {
   const { isDarkMode } = useThemeMode();
@@ -23,7 +23,7 @@ export default () => {
     },
     { store },
   );
-  const { data, isLoading } = useSWR(id, fechOpenCollectiveData, { revalidateOnFocus: false });
+  const { data, isLoading } = useSWR(id, fetchOpenCollectiveData, { revalidateOnFocus: false });
 
   return (
     <StoryBook levaStore={store}>

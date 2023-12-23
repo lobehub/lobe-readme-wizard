@@ -18,14 +18,18 @@ export const caleHeight = (
   return Math.ceil(length / Math.ceil(col)) * avatarSize * 1.4;
 };
 
-export const fechOpenCollectiveData = async (
+export const fetchOpenCollectiveData = async (
   id = 'lobehub',
   groupBy: TierItem[] = DEFAULT_GROUP,
   fallbackTier: string = (DEFAULT_GROUP.at(-1) as TierItem).title,
 ): Promise<MemberProfile[]> => {
   const res = await fetch(`https://opencollective.com/${id}/members/all.json`);
   const json = await res.json();
-  const filteredData = json.filter((item: any) => item?.totalAmountDonated > 0);
+  const filteredData = json.filter((item: any) => {
+    const dump = json.filter((i: any) => item.name === i.name);
+    if (dump.length > 1 && !item.tier) return false;
+    return item?.totalAmountDonated > 0;
+  });
   const tierSortMap = new Map(groupBy.map((item) => [item.title, item.sort]));
   return [...filteredData].sort((a, b) => {
     const sortA = tierSortMap.get(a.tier || fallbackTier) || 0;

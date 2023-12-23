@@ -38,7 +38,7 @@ const Sponsor: FC<SponsorProps> = ({
     >
       {data.map((item) => {
         const tierConfig = getTier(item.tier);
-        const multiplier = item.totalAmountDonated / tierConfig.amount;
+        const multiplier = Math.floor(item.totalAmountDonated / tierConfig.amount);
         return (
           <div
             key={item.MemberId}
@@ -103,7 +103,7 @@ const Sponsor: FC<SponsorProps> = ({
               }}
             >
               <span>{tierConfig.emoji}</span>
-              <span>{item.name.length > 9 ? item.name.slice(0, 9) + '...' : item.name}</span>
+              <span>{item.name.length > 9 ? item.name.slice(0, 8) + '...' : item.name}</span>
             </div>
           </div>
         );
