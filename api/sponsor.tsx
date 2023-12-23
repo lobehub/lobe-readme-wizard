@@ -2,7 +2,7 @@ import { ImageResponse } from '@vercel/og';
 
 import cors from '../lib/cors';
 import Sponsor from '../src/Sponsor';
-import { caleHeight, fechOpenCollectiveData, fetchFonts, getNumber } from '../src/Sponsor/utils';
+import { caleHeight, fetchOpenCollectiveData, fetchFonts, getNumber } from '../src/Sponsor/utils';
 
 const MULTIPLE = 2;
 
@@ -18,7 +18,7 @@ export default async function handler(request: Request): Promise<any> {
     const width = getNumber(searchParams.get('width'), 800 * MULTIPLE);
     const themeMode = searchParams.get('themeMode') === 'dark' ? 'dark' : 'light';
     const id = searchParams.get('id') || 'lobehub';
-    const data = await fechOpenCollectiveData(id);
+    const data = await fetchOpenCollectiveData(id);
     const { fontBold, fontRegular } = await fetchFonts();
     const height = caleHeight(data, { avatarSize, width });
 
