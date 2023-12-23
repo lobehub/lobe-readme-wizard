@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 0.8.8](https://github.com/lobehub/lobe-readme-wizard/compare/v0.8.7...v0.8.8)
+
+<sup>Released on **2023-12-23**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix SponsorKit.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix SponsorKit ([d1e3ecb](https://github.com/lobehub/lobe-readme-wizard/commit/d1e3ecb))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 0.8.7](https://github.com/lobehub/lobe-readme-wizard/compare/v0.8.6...v0.8.7)
 
 <sup>Released on **2023-12-06**</sup>
