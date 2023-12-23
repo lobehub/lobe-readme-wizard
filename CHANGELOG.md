@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 0.8.9](https://github.com/lobehub/lobe-readme-wizard/compare/v0.8.8...v0.8.9)
+
+<sup>Released on **2023-12-23**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix func typo.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix func typo ([5a86506](https://github.com/lobehub/lobe-readme-wizard/commit/5a86506))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 0.8.8](https://github.com/lobehub/lobe-readme-wizard/compare/v0.8.7...v0.8.8)
 
 <sup>Released on **2023-12-23**</sup>
