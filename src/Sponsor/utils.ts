@@ -23,22 +23,24 @@ export const fetchOpenCollectiveData = async (
   groupBy: TierItem[] = DEFAULT_GROUP,
   fallbackTier: string = (DEFAULT_GROUP.at(-1) as TierItem).title,
 ): Promise<MemberProfile[]> => {
+  const tierSortMap = new Map(groupBy.map((item) => [item.title, item.sort]));
   const res = await fetch(`https://opencollective.com/${id}/members/all.json`);
   const json = await res.json();
-  const filteredData = json.filter((item: any) => {
-    const dump = json.filter((i: any) => item.name === i.name);
-    if (dump.length > 1 && !item.tier) return false;
-    return item?.totalAmountDonated > 0;
-  });
-  const tierSortMap = new Map(groupBy.map((item) => [item.title, item.sort]));
-  return [...filteredData].sort((a, b) => {
+  const sortByGroup = (a: any, b: any) => {
     const sortA = tierSortMap.get(a.tier || fallbackTier) || 0;
     const sortB = tierSortMap.get(b.tier || fallbackTier) || 0;
     if (sortA !== sortB) {
       return sortB - sortA;
     }
     return b.totalAmountDonated - a.totalAmountDonated;
+  };
+  const filteredData = json.filter((item: any) => {
+    const dump = json.filter((i: any) => item.name === i.name).sort(sortByGroup);
+    if (dump.length > 1 && item.tier !== dump[0].tier) return false;
+    return item?.totalAmountDonated > 0;
   });
+
+  return [...filteredData].sort(sortByGroup);
 };
 
 export const getTier = (
