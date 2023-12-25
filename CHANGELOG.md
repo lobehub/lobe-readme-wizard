@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 0.8.10](https://github.com/lobehub/lobe-readme-wizard/compare/v0.8.9...v0.8.10)
+
+<sup>Released on **2023-12-25**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix sponsor fliter.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix sponsor fliter ([3a4cd47](https://github.com/lobehub/lobe-readme-wizard/commit/3a4cd47))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 0.8.9](https://github.com/lobehub/lobe-readme-wizard/compare/v0.8.8...v0.8.9)
 
 <sup>Released on **2023-12-23**</sup>
