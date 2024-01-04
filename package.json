@@ -56,7 +56,7 @@
   "dependencies": {
     "@babel/runtime": "^7",
     "@lobehub/ui": "latest",
-    "@vercel/og": "0.5.18",
+    "@vercel/og": "0.6.2",
     "ahooks": "^3",
     "antd": "^5",
     "antd-style": "^3",
