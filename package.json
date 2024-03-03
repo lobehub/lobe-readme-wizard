@@ -91,7 +91,7 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@vitest/coverage-v8": "latest",
-    "commitlint": "^18",
+    "commitlint": "^19.0.0",
     "concurrently": "^8",
     "cross-env": "^7",
     "dumi": "^2",
