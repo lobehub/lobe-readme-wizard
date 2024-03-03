@@ -66,7 +66,7 @@
     "lodash-es": "^4",
     "lucide-react": "latest",
     "polished": "^4",
-    "query-string": "^8",
+    "query-string": "^9.0.0",
     "react-layout-kit": "^1",
     "react-markdown": "^8",
     "react-syntax-highlighter": "^15",
