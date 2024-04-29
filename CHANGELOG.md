@@ -2,6 +2,31 @@
 
 # Changelog
 
+## [Version 0.9.0](https://github.com/lobehub/lobe-readme-wizard/compare/v0.8.10...v0.9.0)
+
+<sup>Released on **2024-04-29**</sup>
+
+#### ✨ Features
+
+- **misc**: Update Sponsor provider.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: Update Sponsor provider ([61ca14b](https://github.com/lobehub/lobe-readme-wizard/commit/61ca14b))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 0.8.10](https://github.com/lobehub/lobe-readme-wizard/compare/v0.8.9...v0.8.10)
 
 <sup>Released on **2023-12-25**</sup>
