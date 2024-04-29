@@ -4,24 +4,24 @@ export const DEFAULT_WIDTH = 800;
 export const DEFAULT_AVATAR_SIZE = 64;
 
 export interface MemberProfile {
-  MemberId: number;
+  MemberId?: number;
   company?: string;
-  createdAt: string;
+  createdAt?: string;
   currency?: string;
   description?: string;
   email?: string;
   github?: string;
   image?: string;
-  isActive: boolean;
-  lastTransactionAmount: number;
-  lastTransactionAt: string;
+  isActive?: boolean;
+  lastTransactionAmount?: number;
+  lastTransactionAt?: string;
   name: string;
-  profile: string;
-  role: 'ADMIN' | 'HOST' | 'BACKER';
+  profile?: string;
+  role?: 'ADMIN' | 'HOST' | 'BACKER';
   tier?: string;
   totalAmountDonated: number;
   twitter?: string;
-  type: 'USER' | 'ORGANIZATION';
+  type?: 'USER' | 'ORGANIZATION';
   website?: string;
 }
 
@@ -83,7 +83,7 @@ export const DEFAULT_GROUP: TierItem[] = [
     amount: 1,
     emoji: '🌟',
     preset: 'backer',
-    sort: 1,
+    sort: 0,
     title: '🌟 One Time',
   },
 ];

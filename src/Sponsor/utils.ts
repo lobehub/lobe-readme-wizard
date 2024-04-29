@@ -1,3 +1,5 @@
+import { Sponsorship } from 'sponsorkit';
+
 import {
   DEFAULT_AVATAR_SIZE,
   DEFAULT_GROUP,
@@ -7,7 +9,7 @@ import {
 } from './const';
 
 export const caleHeight = (
-  data: MemberProfile[] = [],
+  data: Sponsorship[] = [],
   {
     width = DEFAULT_WIDTH,
     avatarSize = DEFAULT_AVATAR_SIZE,
@@ -18,29 +20,41 @@ export const caleHeight = (
   return Math.ceil(length / Math.ceil(col)) * avatarSize * 1.4;
 };
 
-export const fetchOpenCollectiveData = async (
-  id = 'lobehub',
+export const formateSponsorData = (
+  json: Sponsorship[],
   groupBy: TierItem[] = DEFAULT_GROUP,
   fallbackTier: string = (DEFAULT_GROUP.at(-1) as TierItem).title,
-): Promise<MemberProfile[]> => {
+): MemberProfile[] => {
   const tierSortMap = new Map(groupBy.map((item) => [item.title, item.sort]));
-  const res = await fetch(`https://opencollective.com/${id}/members/all.json`);
-  const json = await res.json();
-  const sortByGroup = (a: any, b: any) => {
-    const sortA = tierSortMap.get(a.tier || fallbackTier) || 0;
-    const sortB = tierSortMap.get(b.tier || fallbackTier) || 0;
+
+  const getValue = (item: Sponsorship) =>
+    item?.raw?.totalDonations?.value || item?.raw?.amount?.value || item?.monthlyDollars;
+
+  const sortByGroup = (a: Sponsorship, b: Sponsorship) => {
+    const sortA = tierSortMap.get(a.tierName || fallbackTier) || 0;
+    const sortB = tierSortMap.get(b.tierName || fallbackTier) || 0;
     if (sortA !== sortB) {
       return sortB - sortA;
     }
-    return b.totalAmountDonated - a.totalAmountDonated;
+
+    return getValue(b) - getValue(a);
   };
-  const filteredData = json.filter((item: any) => {
-    const dump = json.filter((i: any) => item.name === i.name).sort(sortByGroup);
-    if (dump.length > 1 && item.tier !== dump[0].tier) return false;
-    return item?.totalAmountDonated > 0;
+  const filteredData = json.filter((item: Sponsorship) => {
+    const dump = json
+      .filter((i: Sponsorship) => item.sponsor.login === i.sponsor.login)
+      .sort(sortByGroup);
+    if (dump.length > 1 && item.tierName !== dump[0].tierName) return false;
+    return getValue(item) > 0;
   });
 
-  return [...filteredData].sort(sortByGroup);
+  return filteredData.sort(sortByGroup).map((item) => {
+    return {
+      image: item.sponsor.avatarUrl,
+      name: item.sponsor.name,
+      tier: item.tierName || fallbackTier,
+      totalAmountDonated: getValue(item),
+    };
+  });
 };
 
 export const getTier = (

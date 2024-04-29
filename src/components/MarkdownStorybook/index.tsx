@@ -1,4 +1,4 @@
-import { StroyBook, StroyBookProps } from '@lobehub/ui';
+import { StoryBook, StoryBookProps } from '@lobehub/ui';
 import { memo } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
@@ -7,15 +7,15 @@ import Markdown from '@/components/Markdown';
 
 import { useStyles } from './style';
 
-const MarkdownEditor = memo<{ children: string; levaStore: StroyBookProps['levaStore'] }>(
+const MarkdownEditor = memo<{ children: string; levaStore: StoryBookProps['levaStore'] }>(
   ({ children, levaStore }) => {
     const { styles } = useStyles();
 
     return (
       <Flexbox className={styles.container}>
-        <StroyBook levaStore={levaStore} noPadding>
+        <StoryBook levaStore={levaStore} noPadding>
           <Markdown className={styles.markdown}>{children}</Markdown>
-        </StroyBook>
+        </StoryBook>
         <Highlight className={styles.preview} fullFeatured language={'md'} type={'pure'}>
           {children}
         </Highlight>

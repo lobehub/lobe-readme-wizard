@@ -1,13 +1,14 @@
 import type { CSSProperties, FC } from 'react';
+import { Sponsorship } from 'sponsorkit';
 
 import { Avatar } from './Avatar';
-import { DEFAULT_AVATAR_SIZE, MemberProfile } from './const';
+import { DEFAULT_AVATAR_SIZE } from './const';
 import { theme } from './style';
-import { getTier } from './utils';
+import { formateSponsorData, getTier } from './utils';
 
 export interface SponsorProps {
   avatarSize?: number;
-  data: MemberProfile[];
+  data: Sponsorship[];
   height?: number;
   padding?: number;
   style?: CSSProperties;
@@ -25,6 +26,10 @@ const Sponsor: FC<SponsorProps> = ({
 }) => {
   const styles = theme(themeMode);
 
+  const sponsorData = formateSponsorData(data);
+
+  console.log(sponsorData);
+
   return (
     <div
       style={{
@@ -36,12 +41,12 @@ const Sponsor: FC<SponsorProps> = ({
         ...style,
       }}
     >
-      {data.map((item) => {
+      {sponsorData.map((item, index) => {
         const tierConfig = getTier(item.tier);
         const multiplier = Math.floor(item.totalAmountDonated / tierConfig.amount);
         return (
           <div
-            key={item.MemberId}
+            key={index}
             style={{
               alignItems: 'center',
               display: 'flex',
@@ -103,7 +108,7 @@ const Sponsor: FC<SponsorProps> = ({
               }}
             >
               <span>{tierConfig.emoji}</span>
-              <span>{item.name.length > 9 ? item.name.slice(0, 8) + '...' : item.name}</span>
+              <span>{item.name.length > 8 ? item.name.slice(0, 7) + '...' : item.name}</span>
             </div>
           </div>
         );

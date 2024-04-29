@@ -1,8 +1,10 @@
 import { ImageResponse } from '@vercel/og';
+import 'dotenv/config';
+import { fetchSponsors } from 'sponsorkit';
 
 import cors from '../lib/cors';
 import Sponsor from '../src/Sponsor';
-import { caleHeight, fetchOpenCollectiveData, fetchFonts, getNumber } from '../src/Sponsor/utils';
+import { caleHeight, fetchFonts, getNumber } from '../src/Sponsor/utils';
 
 const MULTIPLE = 2;
 
@@ -17,10 +19,22 @@ export default async function handler(request: Request): Promise<any> {
     const avatarSize = getNumber(searchParams.get('avatarSize'), 64 * MULTIPLE);
     const width = getNumber(searchParams.get('width'), 800 * MULTIPLE);
     const themeMode = searchParams.get('themeMode') === 'dark' ? 'dark' : 'light';
-    const id = searchParams.get('id') || 'lobehub';
-    const data = await fetchOpenCollectiveData(id);
+    const data = await fetchSponsors({
+      github: {
+        login: process.env.SPONSORKIT_GITHUB_LOGIN || '',
+        token: process.env.SPONSORKIT_GITHUB_TOKEN || '',
+        type: process.env.SPONSORKIT_GITHUB_TYPE || 'organization',
+      },
+      includePastSponsors: true,
+      opencollective: {
+        key: process.env.SPONSORKIT_OPENCOLLECTIVE_KEY || '',
+        slug: process.env.SPONSORKIT_OPENCOLLECTIVE_ID || 'lobehub',
+        type: process.env.SPONSORKIT_OPENCOLLECTIVE_TYPE || 'collective',
+      },
+    });
+
     const { fontBold, fontRegular } = await fetchFonts();
-    const height = caleHeight(data, { avatarSize, width });
+    const height = caleHeight(data, { avatarSize, width } as any);
 
     const res = new ImageResponse(
       (
