@@ -1,10 +1,9 @@
 import { ImageResponse } from '@vercel/og';
 
-import { fetchSponsors } from '@/services/sponsorkit';
-
 import cors from '../lib/cors';
 import Sponsor from '../src/Sponsor';
 import { caleHeight, fetchFonts, getNumber } from '../src/Sponsor/utils';
+import { fetchSponsors } from '../src/services/sponsorkit';
 
 const MULTIPLE = 2;
 
