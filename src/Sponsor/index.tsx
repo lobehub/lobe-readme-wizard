@@ -1,5 +1,6 @@
 import type { CSSProperties, FC } from 'react';
-import { Sponsorship } from 'sponsorkit';
+
+import { Sponsorship } from '@/services/sponsorkit/types';
 
 import { Avatar } from './Avatar';
 import { DEFAULT_AVATAR_SIZE } from './const';

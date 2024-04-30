@@ -1,6 +1,6 @@
 import { ImageResponse } from '@vercel/og';
-import 'dotenv/config';
-import { fetchSponsors } from 'sponsorkit';
+
+import { fetchSponsors } from '@/services/sponsorkit';
 
 import cors from '../lib/cors';
 import Sponsor from '../src/Sponsor';

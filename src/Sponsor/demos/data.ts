@@ -1,4 +1,4 @@
-import { Sponsorship } from 'sponsorkit';
+import { Sponsorship } from '@/services/sponsorkit/types';
 
 const data: Sponsorship[] = [
   {

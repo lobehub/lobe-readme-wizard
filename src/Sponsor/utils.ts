@@ -1,4 +1,4 @@
-import { Sponsorship } from 'sponsorkit';
+import { Sponsorship } from '@/services/sponsorkit/types';
 
 import {
   DEFAULT_AVATAR_SIZE,

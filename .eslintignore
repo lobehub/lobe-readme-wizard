@@ -27,4 +27,4 @@ logs
 
 # misc
 # add other ignore file below
-lib
+**/**/makeQuery.ts
