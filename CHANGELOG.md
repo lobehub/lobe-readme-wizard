@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 0.9.3](https://github.com/lobehub/lobe-readme-wizard/compare/v0.9.2...v0.9.3)
+
+<sup>Released on **2024-05-16**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix dumi.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix dumi ([7ca0012](https://github.com/lobehub/lobe-readme-wizard/commit/7ca0012))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 0.9.2](https://github.com/lobehub/lobe-readme-wizard/compare/v0.9.1...v0.9.2)
 
 <sup>Released on **2024-04-30**</sup>
