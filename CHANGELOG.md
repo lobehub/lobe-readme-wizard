@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 0.9.4](https://github.com/lobehub/lobe-readme-wizard/compare/v0.9.3...v0.9.4)
+
+<sup>Released on **2024-06-25**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Add cache.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Add cache ([3012739](https://github.com/lobehub/lobe-readme-wizard/commit/3012739))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 0.9.3](https://github.com/lobehub/lobe-readme-wizard/compare/v0.9.2...v0.9.3)
 
 <sup>Released on **2024-05-16**</sup>
