@@ -71,12 +71,14 @@ export const fetchFonts = async () => {
   // Regular Font
   const fontFileRegular = await fetch(
     'https://gw.alipayobjects.com/os/kitchen/BUfo9kyDYs/HarmonyOS_Sans_Regular.ttf',
+    { cache: 'force-cache' },
   );
   const fontRegular: ArrayBuffer = await fontFileRegular.arrayBuffer();
 
   // Bold Font
   const fontFileBold = await fetch(
     'https://gw.alipayobjects.com/os/kitchen/ywwdIaXDZa/HarmonyOS_Sans_Bold.ttf',
+    { cache: 'force-cache' },
   );
   const fontBold: ArrayBuffer = await fontFileBold.arrayBuffer();
 
