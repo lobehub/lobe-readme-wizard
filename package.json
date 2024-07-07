@@ -77,7 +77,7 @@
     "remark-gfm": "^3",
     "remark-slug": "^7",
     "remark-toc": "^8",
-    "simple-icons": "^10.0.0",
+    "simple-icons": "^13.0.0",
     "swr": "^2.2.4",
     "url-join": "^5",
     "use-merge-value": "^1",
