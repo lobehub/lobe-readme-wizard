@@ -68,7 +68,7 @@
     "lucide-react": "latest",
     "node-html-parser": "^6.1.13",
     "polished": "^4",
-    "query-string": "^8",
+    "query-string": "^9.0.0",
     "react-layout-kit": "^1",
     "react-markdown": "^8",
     "react-syntax-highlighter": "^15",
