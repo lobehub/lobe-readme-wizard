@@ -88,11 +88,14 @@ export default defineConfig({
   define: {
     'process.env': process.env,
   },
-  favicons: ['https://npm.elemecdn.com/@lobehub/assets-favicons/assets/favicon.ico'],
+  favicons: ['https://lobehub.com/favicon.ico'],
   locales: [{ id: 'en-US', name: 'English' }],
   mfsu: isWin ? undefined : {},
   npmClient: 'pnpm',
   publicPath: '/',
+  sitemap: {
+    hostname: 'https://readme-wizard.lobehub.com',
+  },
   styles: [
     `html, body { background: transparent;  }
 
