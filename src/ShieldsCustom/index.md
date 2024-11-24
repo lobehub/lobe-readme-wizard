@@ -3,12 +3,15 @@ nav: components
 group: shields
 title: Custom
 order: 1
+description: Shields generator
 ---
 
-## Custom Single
+## Editor
+
+### Custom Single
 
 <code src="./Single.tsx" inline></code>
 
-## Custom Double
+### Custom Double
 
 <code src="./Double.tsx" inline></code>

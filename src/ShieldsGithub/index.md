@@ -3,28 +3,31 @@ nav: components
 group: shields
 title: Github
 order: 2
+description: Github shields generator
 ---
 
-## Social
+## Editor
+
+### Social
 
 <code src="./Social.tsx" inline></code>
 
-## Release
+### Release
 
 <code src="./Release.tsx" inline></code>
 
-## Action
+### Action
 
 <code src="./Action.tsx" inline></code>
 
-## Star History
+### Star History
 
 <code src="./StarHistory.tsx" inline></code>
 
-## Codespace
+### Codespace
 
 <code src="./Codespace.tsx" inline></code>
 
-## Contributors
+### Contributors
 
 <code src="./Contributors.tsx" inline></code>

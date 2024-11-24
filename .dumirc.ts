@@ -1,10 +1,18 @@
 import { defineConfig } from 'dumi';
+import { SiteThemeConfig } from 'dumi-theme-lobehub';
+import { INavItem } from 'dumi/dist/client/theme-api/types';
 
-import { description, homepage, name } from './package.json';
+import { description, homepage } from './package.json';
 
 const isWin = process.platform === 'win32';
 
-const themeConfig = {
+const nav: INavItem[] = [
+  { link: '/components/readme-hero', title: 'Generator' },
+  { link: 'https://simpleicons.org/', mode: 'override', title: 'Icons' },
+  { link: '/changelog', title: 'Changelog' },
+];
+
+const themeConfig: SiteThemeConfig = {
   actions: [
     {
       link: homepage,
@@ -17,65 +25,37 @@ const themeConfig = {
       type: 'primary',
     },
   ],
-  apiHeader: {
-    docUrl: false,
-    match: ['/components'],
-    pkg: name,
-    sourceUrl: false,
-    type: 'doc',
-  },
-  description: description,
-  docStyle: 'pure',
-  footer: 'Made with 🤯 by LobeHub',
-  footerConfig: {
-    resources: {
-      items: [
-        {
-          description: 'Markdown processor ',
-          openExternal: true,
-          title: 'Remark',
-          url: 'https://github.com/remarkjs',
-        },
-        {
-          description: 'Concise badges',
-          openExternal: true,
-          title: 'Shields',
-          url: 'https://shields.io/',
-        },
-        {
-          description: 'Icons for popular brands',
-          openExternal: true,
-          title: 'Simple Icons',
-          url: 'https://simpleicons.org',
-        },
-        {
-          description: 'Dynamically stats for github',
-          openExternal: true,
-          title: 'Readme Stats',
-          url: 'https://github.com/anuraghazra/github-readme-stats',
-        },
-        {
-          description: 'List of GitHub badges',
-          openExternal: true,
-          title: 'Awesome Badges',
-          url: 'https://github.com/Envoy-VC/awesome-badges',
-        },
-      ],
-      title: 'Resources',
+  analytics: {
+    plausible: {
+      domain: 'readme-wizard.lobehub.com',
+      scriptBaseUrl: 'https://plausible.lobehub-inc.cn',
     },
   },
+  apiHeader: {
+    docUrl: `{github}/tree/master/src/{atomId}/index.md`,
+    match: ['/components'],
+    sourceUrl: `{github}/tree/master/src/{atomId}/index.tsx`,
+    type: 'doc',
+  },
+  description,
   giscus: {
     category: 'Ideas',
     categoryId: 'DIC_kwDOJloKoM4CXsCu',
     repo: 'lobehub/lobe-readme-wizard',
     repoId: 'R_kgDOKTF8TQ',
   },
+  metadata: {
+    openGraph: {
+      image:
+        'https://repository-images.githubusercontent.com/691108941/a66e25b3-1481-429c-b565-419bfb859ecb',
+    },
+  },
   name: 'ReadmeWizard',
-  nav: [
-    { link: '/components/readme-hero', title: 'Generator' },
-    { link: 'https://simpleicons.org/', mode: 'override', title: 'Icons' },
-    { link: '/changelog', title: 'Changelog' },
-  ],
+  nav,
+  prefersColor: {
+    default: 'dark',
+    switch: false,
+  },
   socialLinks: {
     discord: 'https://discord.gg/AYFPHvv2jT',
     github: homepage,

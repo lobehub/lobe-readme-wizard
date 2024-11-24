@@ -8,7 +8,7 @@ const Highlight = memo<HighlighterProps>(({ children, ...props }) => {
   const { data, isLoading } = useSWR(children, () => remarkFormat(children));
 
   return (
-    <Highlighter {...props} language={'md'} type={'pure'}>
+    <Highlighter {...props} language={'md'} type={'block'}>
       {isLoading ? '' : String(data)}
     </Highlighter>
   );
