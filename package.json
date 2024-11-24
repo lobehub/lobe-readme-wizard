@@ -1,6 +1,6 @@
 {
   "name": "@lobehub/readme-wizard",
-  "version": "0.10.0",
+  "version": "0.10.1",
   "description": "Generate lobe style product README by magic",
   "homepage": "https://github.com/lobehub/lobe-readme-generator",
   "bugs": {

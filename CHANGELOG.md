@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 0.10.1](https://github.com/lobehub/lobe-readme-wizard/compare/v0.10.0...v0.10.1)
+
+<sup>Released on **2024-11-24**</sup>
+
+#### 💄 Styles
+
+- **misc**: Update og.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Styles
+
+- **misc**: Update og ([9586724](https://github.com/lobehub/lobe-readme-wizard/commit/9586724))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ## [Version 0.10.0](https://github.com/lobehub/lobe-readme-wizard/compare/v0.9.4...v0.10.0)
 
 <sup>Released on **2024-09-20**</sup>
