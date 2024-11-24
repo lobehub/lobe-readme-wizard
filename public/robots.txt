@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://readme-wizard.lobehub.com
+Sitemap: https://readme-wizard.lobehub.com/sitemap.xml
