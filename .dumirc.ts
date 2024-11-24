@@ -4,6 +4,8 @@ import { INavItem } from 'dumi/dist/client/theme-api/types';
 
 import { description, homepage } from './package.json';
 
+const isProduction = process.env.NODE_ENV === 'production';
+
 const isWin = process.platform === 'win32';
 
 const nav: INavItem[] = [
@@ -15,6 +17,7 @@ const nav: INavItem[] = [
 const themeConfig: SiteThemeConfig = {
   actions: [
     {
+      icon: 'Github',
       link: homepage,
       openExternal: true,
       text: 'Github',
@@ -68,7 +71,10 @@ export default defineConfig({
   define: {
     'process.env': process.env,
   },
+  exportStatic: {},
+  extraBabelPlugins: ['antd-style'],
   favicons: ['https://lobehub.com/favicon.ico'],
+  jsMinifier: 'swc',
   locales: [{ id: 'en-US', name: 'English' }],
   mfsu: isWin ? undefined : {},
   npmClient: 'pnpm',
@@ -76,6 +82,7 @@ export default defineConfig({
   sitemap: {
     hostname: 'https://readme-wizard.lobehub.com',
   },
+  ssr: isProduction ? {} : false,
   styles: [
     `html, body { background: transparent;  }
 
