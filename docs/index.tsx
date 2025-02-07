@@ -1,7 +1,8 @@
-import { ReadmeHero } from '@lobehub/readme-wizard';
 import { Button } from 'antd';
 import { Link } from 'dumi';
 import { Center } from 'react-layout-kit';
+
+import ReadmeHero from '@/ReadmeHero';
 
 export default () => {
   return (

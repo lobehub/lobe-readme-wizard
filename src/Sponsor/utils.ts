@@ -50,7 +50,7 @@ export const formateSponsorData = (
   return filteredData.sort(sortByGroup).map((item) => {
     return {
       image: item.sponsor.avatarUrl,
-      name: item.sponsor.name,
+      name: item.sponsor.name || 'Guest',
       tier: item.tierName || fallbackTier,
       totalAmountDonated: getValue(item),
     };

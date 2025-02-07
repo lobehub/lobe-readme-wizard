@@ -33,9 +33,8 @@ const MarkdownEditor = memo<MarkdownEditorProps>(({ onChange, value }) => {
       className={styles.editor}
       language={'md'}
       onValueChange={setCurrentValue}
-      resize={false}
-      type={'pure'}
       value={currentValue}
+      variant={'pure'}
     />
   );
 

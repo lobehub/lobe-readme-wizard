@@ -10,7 +10,7 @@ export interface Sponsor {
   avatarUrlMediumRes?: string;
   linkUrl?: string;
   login: string;
-  name: string;
+  name: string | null;
   type: 'User' | 'Organization';
   websiteUrl?: string;
 }
@@ -172,7 +172,7 @@ export interface SponsorkitConfig extends ProvidersConfig {
    *
    * @default 'sponsors'
    */
-  name?: string;
+  name?: string | null;
 
   /**
    * Padding of image container
