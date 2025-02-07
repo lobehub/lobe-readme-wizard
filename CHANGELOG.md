@@ -2,6 +2,32 @@
 
 # Changelog
 
+### [Version 0.10.4](https://github.com/lobehub/lobe-readme-wizard/compare/v0.10.3...v0.10.4)
+
+<sup>Released on **2025-02-07**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix build, Fix build.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix build ([730a9c0](https://github.com/lobehub/lobe-readme-wizard/commit/730a9c0))
+- **misc**: Fix build ([427bbad](https://github.com/lobehub/lobe-readme-wizard/commit/427bbad))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 0.10.3](https://github.com/lobehub/lobe-readme-wizard/compare/v0.10.2...v0.10.3)
 
 <sup>Released on **2025-02-07**</sup>
