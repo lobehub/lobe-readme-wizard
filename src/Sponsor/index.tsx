@@ -29,8 +29,6 @@ const Sponsor: FC<SponsorProps> = ({
 
   const sponsorData = formateSponsorData(data);
 
-  console.log(sponsorData);
-
   return (
     <div
       style={{
@@ -109,7 +107,7 @@ const Sponsor: FC<SponsorProps> = ({
               }}
             >
               <span>{tierConfig.emoji}</span>
-              <span>{item.name.length > 8 ? item.name.slice(0, 7) + '...' : item.name}</span>
+              <span>{item?.name?.length > 8 ? item.name.slice(0, 7) + '...' : item.name}</span>
             </div>
           </div>
         );

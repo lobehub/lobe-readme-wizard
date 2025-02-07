@@ -1,5 +1,4 @@
 import type { Provider, SponsorkitConfig, Sponsorship } from '../types';
-import { getPastSponsors } from './get-past-sponsors';
 import { makeQuery } from './makeQuery';
 
 const API = 'https://api.github.com/graphql';
@@ -19,7 +18,7 @@ export async function fetchGitHubSponsors(
   let cursor;
 
   do {
-    const query = makeQuery(login, type, cursor);
+    const query = makeQuery(login, type, !config.includePastSponsors, cursor);
     const res = await fetch(API, {
       body: JSON.stringify({ query }),
       headers: {
@@ -58,14 +57,6 @@ export async function fetchGitHubSponsors(
       tierName: raw.tier.name,
     }),
   );
-
-  if (config.includePastSponsors) {
-    try {
-      processed.push(...(await getPastSponsors(login)));
-    } catch (error) {
-      console.error('Failed to fetch past sponsors:', error);
-    }
-  }
 
   return processed;
 }

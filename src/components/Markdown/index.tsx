@@ -4,7 +4,6 @@ import ReactMarkdown from 'react-markdown';
 import rehypeHighlight from 'rehype-highlight';
 import rehypeRaw from 'rehype-raw';
 import remarkGfm from 'remark-gfm';
-import remarkSlug from 'remark-slug';
 import remarkToc from 'remark-toc';
 
 import HighlightStyle from './HighlightStyle';
@@ -19,7 +18,7 @@ export interface MarkdownProps {
 const Markdown = memo<MarkdownProps>(({ children, className, style, ...props }) => {
   const { styles, cx } = useStyles();
   const rehypePlugins = [rehypeRaw, [rehypeHighlight, { ignoreMissing: true }]] as any;
-  const remarkPlugins = [remarkGfm, remarkToc, remarkSlug];
+  const remarkPlugins = [remarkGfm, remarkToc];
 
   return (
     <article className={cx(styles.container, className)} style={style}>

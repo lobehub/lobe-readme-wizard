@@ -1,9 +1,9 @@
 const graphql = String.raw;
 
-export function makeQuery(login: string, type: string, cursor?: string) {
+export function makeQuery(login: string, type: string, activeOnly = true, cursor?: string) {
   return graphql`{
-    ${type}(login: "${login}") {
-    sponsorshipsAsMaintainer(first: 100${cursor ? ` after: "${cursor}"` : ''}) {
+  ${type}(login: "${login}") {
+    sponsorshipsAsMaintainer(activeOnly: ${Boolean(activeOnly)}, first: 100${cursor ? ` after: "${cursor}"` : ''}) {
       totalCount
       pageInfo {
         endCursor
@@ -12,6 +12,7 @@ export function makeQuery(login: string, type: string, cursor?: string) {
       nodes {
         createdAt
         privacyLevel
+        isActive
         tier {
           name
           isOneTime
@@ -36,5 +37,5 @@ export function makeQuery(login: string, type: string, cursor?: string) {
       }
     }
   }
-  }`;
+}`;
 }
