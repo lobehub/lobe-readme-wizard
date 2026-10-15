@@ -64,7 +64,7 @@ export const genMarkdownHero = (options: MarkdownHeroOptions) => {
   const logoGroup = logo2
     ? [
         `<img height="120" src="${logo}">`,
-        '<img height="120" src="https://gw.alipayobjects.com/zos/kitchen/qJ3l3EPsdW/split.svg">',
+        '<img height="120" src="https://raw.githubusercontent.com/lobehub/lobe-assets/master/packages/assets-logo/assets/split.svg">',
         `<img height="120" src="${logo2}">`,
       ].join('\n')
     : `<img height="160" src="${logo}">`;
